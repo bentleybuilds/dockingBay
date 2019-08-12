@@ -1,85 +1,213 @@
 {
-    "First Order":[
-        {
-            "name": "TIE/ba Baron Space Superiority Interceptor",
-            "xws": "tiebainterceptor",
-            "ffg": 6666666,
+    "First Order":{
+          "TIE/fo Fighter":{
+            "name": "TIE/fo Fighter",
+            "xws": "tiefofighter",
+            "ffg": 49,
             "size": "Small",
             "dial": [
-              "1TB",
-              "1BB",
-              "1NB",
-              "1YB",
+              "1TW",
+              "1YW",
               "2LR",
-              "2TW",
+              "2TB",
               "2BB",
               "2FB",
               "2NB",
-              "2YW",
+              "2YB",
               "2PR",
               "3TW",
               "3BW",
               "3FB",
               "3NW",
               "3YW",
-              "4FB",
-              "5FW",
-              "5KR"
+              "4FW",
+              "4KR",
+              "5FW"
             ],
             "faction": "First Order",
             "stats": [
-              { "arc": "Front Arc", "type": "attack", "value": 3 },
+              { "arc": "Front Arc", "type": "attack", "value": 2 },
               { "type": "agility", "value": 3 },
-              { "type": "hull", "value": 2 },
-              { "type": "shields", "value": 2 }
+              { "type": "hull", "value": 3 },
+              { "type": "shields", "value": 1 }
             ],
             "actions": [
-              {
-                "difficulty": "White",
-                "type": "Focus"
-              },
-              {
-                "difficulty": "White",
-                "type": "Evade"
-              },
-              {
-                "difficulty": "White",
-                "type": "Lock"
-              },
-              {
-                "difficulty": "White",
-                "type": "Barrel Roll"
-              },
-              {
-                "difficulty": "White",
-                "type": "Boost"
-              }
+              { "difficulty": "White", "type": "Focus" },
+              { "difficulty": "White", "type": "Evade" },
+              { "difficulty": "White", "type": "Lock" },
+              { "difficulty": "White", "type": "Barrel Roll" }
             ],
-            "icon": "",
+            "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_TIEfo.png",
             "pilots": [
               {
-                "name": "Major Vonreg",
-                "caption": "Red Baron",
+                "name": "\"Midnight\"",
+                "caption": "Omega Leader",
                 "initiative": 6,
                 "limited": 1,
-                "cost": 6666666,
-                "xws": "majorvonreg",
-                "ability": "During the System Phase, you may choose 1 enemy ship in your [Bullseye Arc]. That ship gains 1 deplete or strain token of your choice.",
-                "shipAbility": {
-                  "name": "Fine-Tuned Thrusters",
-                  "text": "After you fully execute a maneuver, if you are not depleted or strained, you may gain 1 deplete or strain token to perform a [Lock] or [Barrel Roll] action."
-                },
-                "slots": [
-                  "Talent"
-                ],
-                "image": "",
-                "artwork": "",
-                "ffg": 6666666,
+                "cost": 43,
+                "xws": "midnight",
+                "ability": "While you defend or perform an attack, if you have a lock on the enemy ship, that ship's dice cannot be modified.",
+                "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/c7994885b38757f92bdf3a98c37b3c96.png",
+                "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/c6a43d25d22d4112dd7e968cab4eb3d5.jpg",
+                "slots": ["Talent", "Modification", "Tech"],
+                "ffg": 397,
+                "hyperspace": true
+              },
+              {
+                "name": "Commander Malarus",
+                "caption": "First Order Enforcer",
+                "initiative": 5,
+                "limited": 1,
+                "cost": 39,
+                "xws": "commandermalarus",
+                "ability": "At the start of the Engagement Phase, you may spend 1 [Charge] and gain 1 stress token. If you do, until the end of the round, while you defend or perform an attack, you may change all of your [Focus] results to [Evade] or [Hit] results.",
+                "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/f7506ec739f5580d484ff0ee49b041f3.png",
+                "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/d9cfa6aacc29d55a47aaa0d9f75d362e.jpg",
+                "slots": ["Talent", "Modification", "Tech"],
+                "charges": { "value": 2, "recovers": 0 },
+                "ffg": 452,
+                "hyperspace": true
+              },
+              {
+                "name": "\"Scorch\"",
+                "caption": "Zeta Leader",
+                "initiative": 4,
+                "limited": 1,
+                "cost": 34,
+                "xws": "scorch",
+                "ability": "While you perform a primary attack, if you are not stressed, you may gain 1 stress token to roll 1 additional attack die.",
+                "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/9dd11d408bb869cb947663fc29622833.png",
+                "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/dd225b2dab46b921e622dca6d799591f.jpg",
+                "slots": ["Talent", "Modification", "Tech"],
+                "ffg": 398,
+                "hyperspace": true
+              },
+              {
+                "name": "\"Static\"",
+                "caption": "Omega Ace",
+                "initiative": 4,
+                "limited": 1,
+                "cost": 34,
+                "xws": "static",
+                "ability": "While you perform a primary attack, you may spend your lock on the defender and a focus token to change all of your results to [Critical Hit] results.",
+                "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/2481fe5d98026e086a901d83dbe87018.png",
+                "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/30e0837d4877df289c220ea0ae174078.jpg",
+                "slots": ["Talent", "Modification", "Tech"],
+                "ffg": 399,
+                "hyperspace": true
+              },
+              {
+                "name": "\"Longshot\"",
+                "caption": "Zeta Ace",
+                "initiative": 3,
+                "limited": 1,
+                "cost": 32,
+                "xws": "longshot",
+                "ability": "While you perform a primary attack at attack range 3, roll 1 additional attack die.",
+                "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/d0e698f59696c15b60d7eaa1e2d51eeb.png",
+                "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/31ad38b2fc0d39f37ad82e1c70f62135.jpg",
+                "slots": ["Talent", "Modification", "Tech"],
+                "ffg": 400,
+                "hyperspace": true
+              },
+              {
+                "name": "Omega Squadron Ace",
+                "initiative": 3,
+                "limited": 0,
+                "cost": 29,
+                "xws": "omegasquadronace",
+                "text": "Only pilots who have demonstrated both exceptional skill and unwavering dedication are rewarded with coveted positions in the First Order squadrons operating secretly against the New Republic during the Cold War.",
+                "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/97e72d0f5dc8c2dd21a355e3258f37dd.png",
+                "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/4e5010f7b60902288dac36bf646dcde9.jpg",
+                "slots": ["Talent", "Modification", "Tech"],
+                "ffg": 403,
+                "hyperspace": true
+              },
+              {
+                "name": "\"Muse\"",
+                "caption": "Epsilon Leader",
+                "initiative": 2,
+                "limited": 1,
+                "cost": 31,
+                "xws": "muse",
+                "ability": "At the start of the Engagement Phase, you may choose a friendly ship at range 0-1. If you do, that ship removes 1 stress token.",
+                "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/7de4e91de0906eb548bfe3a08a1b6abe.png",
+                "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/d3f8b9baf0bbd8a7d2b785a616dacbcf.jpg",
+                "slots": ["Talent", "Modification", "Tech"],
+                "ffg": 401,
+                "hyperspace": true
+              },
+              {
+                "name": "TN-3465",
+                "caption": "Loose End",
+                "initiative": 2,
+                "limited": 1,
+                "cost": 29,
+                "xws": "tn3465",
+                "ability": "While another friendly ship performs an attack, if you are at range 0-1 of the defender, you may suffer 1 [Critical Hit] damage to change 1 of the attacker's results to a [Critical Hit] result.",
+                "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/333cbf0da8849edb38c4e93944d8fe57.png",
+                "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/9fce0e75539a225e9ff1536e466c3c13.jpg",
+                "slots": ["Modification", "Tech"],
+                "ffg": 453,
+                "hyperspace": true
+              },
+              {
+                "name": "Zeta Squadron Pilot",
+                "initiative": 2,
+                "limited": 0,
+                "cost": 27,
+                "xws": "zetasquadronpilot",
+                "text": "Unhampered by a cumbersome galactic bureaucracy, technologies originally researched by the Empire's TIE Advanced program are now mass-produced on First Order starfighters. As a result, TIE/fo pilots enjoy higher survival rates than their predecessors in the Galactic Empire.",
+                "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/be1062b6a7a8e4644223146342990a02.png",
+                "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/d20d6cc2a052afc783d535c802874d23.jpg",
+                "slots": ["Modification", "Tech"],
+                "ffg": 404,
+                "hyperspace": true
+              },
+              {
+                "name": "Epsilon Squadron Cadet",
+                "initiative": 1,
+                "limited": 0,
+                "cost": 26,
+                "xws": "epsilonsquadroncadet",
+                "text": "Trained from childhood aboard Resurgent-class Star Destroyers in deep space, many First Order TIE pilots have never even set foot on a planet's surface.",
+                "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/e911cd18f04225bbd36c48114b56f3cc.png",
+                "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/610cb198e4cda75aab0207841c6e4a87.jpg",
+                "slots": ["Modification", "Tech"],
+                "ffg": 405,
+                "hyperspace": true
+              },
+              {
+                "name": "Lieutenant Rivas",
+                "caption": "Inconvenient Witness",
+                "initiative": 1,
+                "limited": 1,
+                "cost": 28,
+                "xws": "lieutenantrivas",
+                "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/7188ec2eb699261dbd47a15df6164f4c.png",
+                "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/66f969d008fc995bd940bf1ab647109f.jpg",
+                "ability": "After a ship at range 1-2 gains a red or orange token, if you do not have that ship locked, you may acquire a lock on that ship.",
+                "slots": ["Modification", "Tech"],
+                "ffg": 454,
+                "hyperspace": true
+              },
+              {
+                "name": "\"Null\"",
+                "caption": "Epsilon Ace",
+                "initiative": 0,
+                "limited": 1,
+                "cost": 31,
+                "xws": "null",
+                "ability": "While you are not damaged, treat your initiative value as 7.",
+                "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/79a9d780d3540647af1e057113869294.png",
+                "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/eb788d9622d096c6d96c96cf20dc1939.jpg",
+                "slots": ["Modification", "Tech"],
+                "ffg": 402,
                 "hyperspace": true
               }
             ]
           },
-          {
+          "TIE/sf Fighter":{
             "name": "TIE/sf Fighter",
             "xws": "tiesffighter",
             "ffg": 50,
@@ -231,7 +359,7 @@
               }
             ]
           },
-          {
+          "TIE/vn Silencer": {
             "name": "TIE/vn Silencer",
             "xws": "tievnsilencer",
             "ffg": 52,
@@ -380,7 +508,7 @@
               }
             ]
           },
-          {
+          "Upsilon-class command shuttle":{
             "name": "Upsilon-class command shuttle",
             "xws": "upsilonclassshuttle",
             "ffg": 51,
@@ -587,23 +715,2881 @@
           }
           
           
-    ],
-    "Galactic Empire":[
+        },
+    "Galactic Empire":{
+      "Alpha-class Star Wing":{
+        "name": "Alpha-class Star Wing",
+        "xws": "alphaclassstarwing",
+        "ffg": 14,
+        "size": "Small",
+        "dial": [
+          "1BW",
+          "1FB",
+          "1NW",
+          "2TW",
+          "2BB",
+          "2FB",
+          "2NB",
+          "2YW",
+          "3TW",
+          "3BW",
+          "3FW",
+          "3NW",
+          "3YW",
+          "4FR"
+        ],
+        "faction": "Galactic Empire",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 2 },
+          { "type": "agility", "value": 2 },
+          { "type": "hull", "value": 4 },
+          { "type": "shields", "value": 3 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Lock" },
+          { "difficulty": "White", "type": "SLAM" },
+          { "difficulty": "White", "type": "Reload" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_AlphaStarwing.png",
+        "pilots": [
+          {
+            "name": "Lieutenant Karsabi",
+            "caption": "Brash Noble",
+            "initiative": 3,
+            "limited": 1,
+            "cost": 37,
+            "xws": "lieutenantkarsabi",
+            "ability": "After you gain a disarm token, if you are not stressed, you may gain 1 stress token to remove 1 disarm token.",
+            "slots": [
+              "Talent",
+              "Sensor",
+              "Torpedo",
+              "Missile",
+              "Modification",
+              "Configuration"
+            ],
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_136.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_136.jpg",
+            "ffg": 136,
+            "hyperspace": false
+          },
+          {
+            "name": "Major Vynder",
+            "caption": "Pragmatic Survivor",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 41,
+            "xws": "majorvynder",
+            "ability": "While you defend, if you are disarmed, roll 1 additional defense die.",
+            "slots": [
+              "Talent",
+              "Sensor",
+              "Torpedo",
+              "Missile",
+              "Modification",
+              "Configuration"
+            ],
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_135.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_135.jpg",
+            "ffg": 135,
+            "hyperspace": false
+          },
+          {
+            "name": "Nu Squadron Pilot",
+            "initiative": 2,
+            "limited": 0,
+            "cost": 32,
+            "xws": "nusquadronpilot",
+            "text": "With a design inspired by other Cygnus Spaceworks vessels, the Alpha-class star wing is a versatile craft assigned to Imperial Navy specialist units that need a starfighter they can outfit for multiple roles.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_138.png",
+            "slots": [
+              "Sensor",
+              "Torpedo",
+              "Missile",
+              "Modification",
+              "Configuration"
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_138.jpg",
+            "ffg": 138,
+            "hyperspace": false
+          },
+          {
+            "name": "Rho Squadron Pilot",
+            "initiative": 3,
+            "limited": 0,
+            "cost": 35,
+            "xws": "rhosquadronpilot",
+            "text": "The elite pilots of Rho Squadron instill terror in the Rebellion, using both the Xg-1 assault configuration and Os-1 arsenal loadout of the Alpha-class star wing to devastating effect.",
+            "slots": [
+              "Talent",
+              "Sensor",
+              "Torpedo",
+              "Missile",
+              "Modification",
+              "Configuration"
+            ],
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_137.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_137.jpg",
+            "ffg": 137,
+            "hyperspace": false
+          }
+        ]
+      },
+      "Lambda-class T-4a Shuttle":{
+        "name": "Lambda-class T-4a Shuttle",
+        "xws": "lambdaclasst4ashuttle",
+        "ffg": 26,
+        "size": "Large",
+        "dial": [
+          "0OR",
+          "1BB",
+          "1FB",
+          "1NB",
+          "2TR",
+          "2BW",
+          "2FB",
+          "2NW",
+          "2YR",
+          "3BR",
+          "3FW",
+          "3NR"
+        ],
+        "faction": "Galactic Empire",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 3 },
+          { "arc": "Rear Arc", "type": "attack", "value": 2 },
+          { "type": "agility", "value": 1 },
+          { "type": "hull", "value": 6 },
+          { "type": "shields", "value": 4 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Reinforce" },
+          { "difficulty": "White", "type": "Coordinate" },
+          { "difficulty": "Red", "type": "Jam" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_Lambda.png",
+        "pilots": [
+          {
+            "name": "Captain Kagi",
+            "caption": "The Emperor's Shuttle Pilot",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 48,
+            "xws": "captainkagi",
+            "ability": "At the start of the Engagement Phase, you may choose 1 or more friendly ships at range 0-3. If you do, transfer all enemy lock tokens from the chosen ships to you.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_142.png",
+            "slots": ["Sensor", "Cannon", "Crew", "Crew", "Modification", "Title"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_142.jpg",
+            "ffg": 142,
+            "hyperspace": false
+          },
+          {
+            "name": "Colonel Jendon",
+            "caption": "Darth Vader's Shuttle Pilot",
+            "initiative": 3,
+            "limited": 1,
+            "cost": 46,
+            "xws": "coloneljendon",
+            "ability": "At the start of the Activation Phase, you may spend 1 [Charge]. If you do, while friendly ships acquire locks this round, they must acquire locks beyond range 3 instead of at range 0-3.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_143.png",
+            "charges": { "value": 2, "recovers": 0 },
+            "slots": ["Sensor", "Cannon", "Crew", "Crew", "Modification", "Title"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_143.jpg",
+            "ffg": 143,
+            "hyperspace": false
+          },
+          {
+            "name": "Lieutenant Sai",
+            "caption": "Death Squadron Veteran",
+            "initiative": 3,
+            "limited": 1,
+            "cost": 47,
+            "xws": "lieutenantsai",
+            "ability": "After you a perform a [Coordinate] action, if the ship you chose performed an action on your action bar, you may perform that action.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_144.png",
+            "slots": ["Sensor", "Cannon", "Crew", "Crew", "Modification", "Title"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_144.jpg",
+            "ffg": 144,
+            "hyperspace": false
+          },
+          {
+            "name": "Omicron Group Pilot",
+            "initiative": 1,
+            "limited": 0,
+            "cost": 43,
+            "xws": "omicrongrouppilot",
+            "text": "Noted for its tri-wing design and advanced sensor suite, the Lambda-class shuttle serves a critical role as a light utility craft in the Imperial Navy.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_145.png",
+            "slots": ["Sensor", "Cannon", "Crew", "Crew", "Modification", "Title"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_145.jpg",
+            "ffg": 145,
+            "hyperspace": false
+          }
+        ]
+      },
+      "TIE Advanced v1":{
+        "name": "TIE Advanced v1",
+        "xws": "tieadvancedv1",
+        "ffg": 25,
+        "size": "Small",
+        "dial": [
+          "1TB",
+          "1BB",
+          "1NB",
+          "1YB",
+          "2ER",
+          "2TW",
+          "2BW",
+          "2FB",
+          "2NW",
+          "2YW",
+          "2RR",
+          "3TW",
+          "3BW",
+          "3FB",
+          "3NW",
+          "3YW",
+          "4FW",
+          "4KR",
+          "5FW"
+        ],
+        "faction": "Galactic Empire",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 2 },
+          { "type": "agility", "value": 3 },
+          { "type": "hull", "value": 2 },
+          { "type": "shields", "value": 2 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Evade" },
+          { "difficulty": "White", "type": "Lock" },
+          {
+            "difficulty": "White",
+            "linked": { "difficulty": "Red", "type": "Focus" },
+            "type": "Barrel Roll"
+          },
+          {
+            "difficulty": "White",
+            "linked": { "difficulty": "Red", "type": "Focus" },
+            "type": "Boost"
+          }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_TIEAdvancedPrototype.png",
+        "pilots": [
+          {
+            "name": "Baron of the Empire",
+            "initiative": 3,
+            "limited": 0,
+            "cost": 32,
+            "xws": "baronoftheempire",
+            "text": "Sienar Fleet System's TIE Advanced v1 is a groundbreaking starfighter design, featuring upgraded engines, a missile launcher, and folding s-foils.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_101.png",
+            "slots": ["Talent", "Sensor", "Missile"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_101.jpg",
+            "ffg": 101,
+            "hyperspace": false
+          },
+          {
+            "name": "Grand Inquisitor",
+            "caption": "Master of the Inquisitorious",
+            "initiative": 5,
+            "limited": 1,
+            "cost": 52,
+            "xws": "grandinquisitor",
+            "ability": "While you defend at attack range 1, you may spend 1 [Force] to prevent the range 1 bonus. While you perform an attack against a defender at attack range 2-3, you may spend 1 [Force] to apply the range 1 bonus.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_99.png",
+            "force": { "value": 2, "recovers": 1, "side": ["dark"] },
+            "slots": ["Sensor", "Missile", "Force Power"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_99.jpg",
+            "ffg": 99,
+            "hyperspace": false
+          },
+          {
+            "name": "Inquisitor",
+            "initiative": 3,
+            "limited": 0,
+            "cost": 35,
+            "xws": "inquisitor",
+            "text": "The fearsome Inquisitors are given a great deal of autonomy and access to the Empire's latest technology, like the prototype TIE Advanced v1.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_102.png",
+            "force": { "value": 1, "recovers": 1, "side": ["dark"] },
+            "slots": ["Sensor", "Missile", "Force Power"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_102.jpg",
+            "ffg": 102,
+            "hyperspace": false
+          },
+          {
+            "name": "Seventh Sister",
+            "caption": "Sadistic Interrogator",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 43,
+            "xws": "seventhsister",
+            "ability": "While you perform a primary attack, before the Neutralize Results step, you may spend 2 [Force] to cancel 1 [Evade] result.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_100.png",
+            "force": { "value": 2, "recovers": 1, "side": ["dark"] },
+            "slots": ["Sensor", "Missile", "Force Power"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_100.jpg",
+            "ffg": 100,
+            "hyperspace": false
+          }
+        ]
+      },
+      "TIE Advanced x1":{
+        "name": "TIE Advanced x1",
+        "xws": "tieadvancedx1",
+        "ffg": 13,
+        "size": "Small",
+        "dial": [
+          "1BB",
+          "1FW",
+          "1NB",
+          "2TW",
+          "2BB",
+          "2FB",
+          "2NB",
+          "2YW",
+          "3ER",
+          "3TW",
+          "3BW",
+          "3FB",
+          "3NW",
+          "3YW",
+          "3RR",
+          "4FW",
+          "4KR",
+          "5FW"
+        ],
+        "faction": "Galactic Empire",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 2 },
+          { "type": "agility", "value": 3 },
+          { "type": "hull", "value": 3 },
+          { "type": "shields", "value": 2 }
+        ],
+        "actions": [
+          {
+            "difficulty": "White",
+            "linked": { "difficulty": "Red", "type": "Barrel Roll" },
+            "type": "Focus"
+          },
+          { "difficulty": "White", "type": "Lock" },
+          { "difficulty": "White", "type": "Barrel Roll" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_TIEAdvanced.png",
+        "pilots": [
+          {
+            "name": "Darth Vader",
+            "caption": "Black Leader",
+            "initiative": 6,
+            "limited": 1,
+            "cost": 67,
+            "xws": "darthvader",
+            "ability": "After you perform an action, you may spend 1 [Force] to perform an action.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_93.png",
+            "alt": [
+              {
+                "image": "https://images-cdn.fantasyflightgames.com/filer_public/24/0a/240a5d21-309c-4d3d-aef9-5dab25564b7b/op18xu_card_altart2.png",
+                "source": "European and North American Championship 2018"
+              }
+            ],
+            "force": { "value": 3, "recovers": 1, "side": ["dark"] },
+            "shipAbility": {
+              "name": "Advanced Targeting Computer",
+              "text": "While you perform a primary attack against a defender you have locked, roll 1 additional attack die and change 1 [Hit] result to a [Critical Hit] result."
+            },
+            "slots": ["Sensor", "Missile", "Modification", "Force Power"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_93.jpg",
+            "ffg": 93,
+            "hyperspace": true
+          },
+          {
+            "name": "Maarek Stele",
+            "caption": "Servant of the Empire",
+            "initiative": 5,
+            "limited": 1,
+            "cost": 46,
+            "xws": "maarekstele",
+            "ability": "While you perform an attack, if the defender would be dealt a faceup damage card, instead draw 3 damage cards, choose 1, and discard the rest.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_94.png",
+            "shipAbility": {
+              "name": "Advanced Targeting Computer",
+              "text": "While you perform a primary attack against a defender you have locked, roll 1 additional attack die and change 1 [Hit] result to a [Critical Hit] result."
+            },
+            "slots": ["Talent", "Sensor", "Missile", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_94.jpg",
+            "ffg": 94,
+            "hyperspace": true
+          },
+          {
+            "name": "Storm Squadron Ace",
+            "initiative": 3,
+            "limited": 0,
+            "cost": 40,
+            "xws": "stormsquadronace",
+            "text": "The TIE Advanced x1 was produced in limited quantities, but Sienar engineers incorporated many of its best qualities into their next TIE model: the TIE Interceptor.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_97.png",
+            "shipAbility": {
+              "name": "Advanced Targeting Computer",
+              "text": "While you perform a primary attack against a defender you have locked, roll 1 additional attack die and change 1 [Hit] result to a [Critical Hit] result."
+            },
+            "slots": ["Talent", "Sensor", "Missile", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_97.jpg",
+            "ffg": 97,
+            "hyperspace": true
+          },
+          {
+            "name": "Tempest Squadron Pilot",
+            "initiative": 2,
+            "limited": 0,
+            "cost": 38,
+            "xws": "tempestsquadronpilot",
+            "text": "The TIE Advanced improved on the popular TIE/ln design by adding shielding, better weapons systems, curved solar panels, and a hyperdrive.",
+            "alt": [
+              {
+                "image": "https://images-cdn.fantasyflightgames.com/filer_public/19/d5/19d5865e-09d1-4bad-b8ac-8e0c5124745a/op18xu_card_plastic2.png",
+                "source": "European and North American Championship 2018"
+              }
+            ],
+            "shipAbility": {
+              "name": "Advanced Targeting Computer",
+              "text": "While you perform a primary attack against a defender you have locked, roll 1 additional attack die and change 1 [Hit] result to a [Critical Hit] result."
+            },
+            "slots": ["Sensor", "Missile", "Modification"],
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_98.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_98.jpg",
+            "ffg": 98,
+            "hyperspace": true
+          },
+          {
+            "name": "Ved Foslo",
+            "caption": "Ambitious Engineer",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 45,
+            "xws": "vedfoslo",
+            "ability": "While you execute a maneuver, you may execute a maneuver of the same bearing and difficulty of a speed 1 higher or lower instead.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_95.png",
+            "shipAbility": {
+              "name": "Advanced Targeting Computer",
+              "text": "While you perform a primary attack against a defender you have locked, roll 1 additional attack die and change 1 [Hit] result to a [Critical Hit] result."
+            },
+            "slots": ["Talent", "Sensor", "Missile", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_95.jpg",
+            "ffg": 95,
+            "hyperspace": true
+          },
+          {
+            "name": "Zertik Strom",
+            "caption": "Pitiless Administrator",
+            "initiative": 3,
+            "limited": 1,
+            "cost": 42,
+            "xws": "zertikstrom",
+            "ability": "During the End Phase, you may spend a lock you have on an enemy ship to expose 1 of that ship's damage cards.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_96.png",
+            "shipAbility": {
+              "name": "Advanced Targeting Computer",
+              "text": "While you perform a primary attack against a defender you have locked, roll 1 additional attack die and change 1 [Hit] result to a [Critical Hit] result."
+            },
+            "slots": ["Sensor", "Missile", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_96.jpg",
+            "ffg": 96,
+            "hyperspace": true
+          }
+        ]
+      },
+      "TIE/ag Aggressor":{
+        "name": "TIE/ag Aggressor",
+        "xws": "tieagaggressor",
+        "ffg": 29,
+        "size": "Small",
+        "dial": [
+          "1BW",
+          "1FB",
+          "1NW",
+          "2TW",
+          "2BB",
+          "2FB",
+          "2NB",
+          "2YW",
+          "3TW",
+          "3BW",
+          "3FB",
+          "3NW",
+          "3YW",
+          "4FW",
+          "4KR"
+        ],
+        "faction": "Galactic Empire",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 2 },
+          { "type": "agility", "value": 2 },
+          { "type": "hull", "value": 4 },
+          { "type": "shields", "value": 1 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Lock" },
+          {
+            "difficulty": "White",
+            "linked": { "difficulty": "Red", "type": "Evade" },
+            "type": "Barrel Roll"
+          }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_TIEAggressor.png",
+        "pilots": [
+          {
+            "name": "\"Double Edge\"",
+            "caption": "Contingency Planner",
+            "initiative": 2,
+            "limited": 1,
+            "cost": 31,
+            "xws": "doubleedge",
+            "ability": "After you perform a [Turret] or [Missile] attack that misses, you may perform a bonus attack using a different weapon.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_128.png",
+            "slots": [
+              "Talent",
+              "Turret",
+              "Missile",
+              "Missile",
+              "Modification",
+              "Gunner"
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_128.jpg",
+            "ffg": 128,
+            "hyperspace": false
+          },
+          {
+            "name": "Lieutenant Kestal",
+            "caption": "Innate Deadeye",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 33,
+            "xws": "lieutenantkestal",
+            "ability": "While you perform an attack, after the defender rolls defense dice, you may spend 1 focus token to cancel all of the defender's blank/[Focus] results.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_127.png",
+            "slots": [
+              "Talent",
+              "Turret",
+              "Missile",
+              "Missile",
+              "Modification",
+              "Gunner"
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_127.jpg",
+            "ffg": 127,
+            "hyperspace": false
+          },
+          {
+            "name": "Onyx Squadron Scout",
+            "initiative": 3,
+            "limited": 0,
+            "cost": 30,
+            "xws": "onyxsquadronscout",
+            "text": "Designed for extended engagements, the TIE/ag is flown primarily by elite pilots trained to leverage both its unique weapons loadout and its maneuverability to full effect.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_129.png",
+            "slots": [
+              "Talent",
+              "Turret",
+              "Missile",
+              "Missile",
+              "Modification",
+              "Gunner"
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_129.jpg",
+            "ffg": 129,
+            "hyperspace": false
+          },
+          {
+            "name": "Sienar Specialist",
+            "initiative": 2,
+            "limited": 0,
+            "cost": 28,
+            "xws": "sienarspecialist",
+            "text": "During the development of the TIE aggressor, Sienar Fleet Systems valued performance and versatility over raw cost efficiency.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_130.png",
+            "slots": ["Turret", "Missile", "Missile", "Modification", "Gunner"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_130.jpg",
+            "ffg": 130,
+            "hyperspace": false
+          }
+        ]
+      },
+      "TIE/ca Punisher":{
+        "name": "TIE/ca Punisher",
+        "xws": "tiecapunisher",
+        "ffg": 20,
+        "size": "Medium",
+        "dial": [
+          "0OR",
+          "1BB",
+          "1FB",
+          "1NB",
+          "2TW",
+          "2BW",
+          "2FB",
+          "2NW",
+          "2YW",
+          "3TR",
+          "3BW",
+          "3FW",
+          "3NW",
+          "3YR",
+          "4KR"
+        ],
+        "faction": "Galactic Empire",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 2 },
+          { "type": "agility", "value": 1 },
+          { "type": "hull", "value": 6 },
+          { "type": "shields", "value": 3 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Lock" },
+          { "difficulty": "Red", "type": "Barrel Roll" },
+          {
+            "difficulty": "White",
+            "linked": { "difficulty": "Red", "type": "Lock" },
+            "type": "Boost"
+          },
+          { "difficulty": "White", "type": "Reload" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_TIEPunisher.png",
+        "pilots": [
+          {
+            "name": "\"Deathrain\"",
+            "caption": "Dexterous Bombardier",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 44,
+            "xws": "deathrain",
+            "ability": "After you drop or launch a device, you may perform an action.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_140.png",
+            "slots": [
+              "Sensor",
+              "Torpedo",
+              "Missile",
+              "Missile",
+              "Device",
+              "Device",
+              "Modification",
+              "Gunner"
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_140.jpg",
+            "ffg": 140,
+            "hyperspace": false
+          },
+          {
+            "name": "\"Redline\"",
+            "caption": "Adrenaline Junkie",
+            "initiative": 5,
+            "limited": 1,
+            "cost": 52,
+            "xws": "redline",
+            "ability": "You can maintain up to 2 locks. After you perform an action, you may acquire a lock.",
+            "slots": [
+              "Sensor",
+              "Torpedo",
+              "Missile",
+              "Missile",
+              "Device",
+              "Device",
+              "Modification",
+              "Gunner"
+            ],
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_139.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_139.jpg",
+            "ffg": 139,
+            "hyperspace": false
+          },
+          {
+            "name": "Cutlass Squadron Pilot",
+            "initiative": 2,
+            "limited": 0,
+            "cost": 38,
+            "xws": "cutlasssquadronpilot",
+            "text": "The TIE punisher's design builds upon the success of the TIE bomber, adding shielding, a second bomb chute, and three additional ordnance pods, each equipped with a twin ion engine.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_141.png",
+            "slots": [
+              "Sensor",
+              "Torpedo",
+              "Missile",
+              "Missile",
+              "Device",
+              "Device",
+              "Modification",
+              "Gunner"
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_141.jpg",
+            "ffg": 141,
+            "hyperspace": false
+          }
+        ]
+      },
+      "TIE/D Defender":{
+        "name": "TIE/D Defender",
+        "xws": "tieddefender",
+        "ffg": 18,
+        "size": "Small",
+        "dial": [
+          "1TR",
+          "1BB",
+          "1NB",
+          "1YR",
+          "2TR",
+          "2BW",
+          "2FB",
+          "2NW",
+          "2YR",
+          "2KR",
+          "3TW",
+          "3BW",
+          "3FB",
+          "3NW",
+          "3YW",
+          "4FB",
+          "4KW",
+          "5FB"
+        ],
+        "faction": "Galactic Empire",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 3 },
+          { "type": "agility", "value": 3 },
+          { "type": "hull", "value": 3 },
+          { "type": "shields", "value": 4 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Evade" },
+          { "difficulty": "White", "type": "Lock" },
+          { "difficulty": "White", "type": "Barrel Roll" },
+          { "difficulty": "White", "type": "Boost" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_TIEDefender.png",
+        "pilots": [
+          {
+            "name": "Colonel Vessery",
+            "caption": "Contemplative Commander",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 84,
+            "xws": "colonelvessery",
+            "ability": "While you perform an attack against a locked ship, after you roll attack dice, you may acquire a lock on the defender.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_123.png",
+            "shipAbility": {
+              "name": "Full Throttle",
+              "text": "After you fully execute a speed 3-5 maneuver, you may perform an [Evade] action."
+            },
+            "slots": ["Talent", "Sensor", "Cannon", "Missile"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_123.jpg",
+            "ffg": 123,
+            "hyperspace": false
+          },
+          {
+            "name": "Countess Ryad",
+            "caption": "Cutthroat Politico",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 82,
+            "xws": "countessryad",
+            "ability": "While you would execute a [Straight] maneuver, you may increase the difficulty of the maneuver. If you do, execute it as a [Koiogran Turn] maneuver instead.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_124.png",
+            "shipAbility": {
+              "name": "Full Throttle",
+              "text": "After you fully execute a speed 3-5 maneuver, you may perform an [Evade] action."
+            },
+            "slots": ["Talent", "Sensor", "Cannon", "Missile"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_124.jpg",
+            "ffg": 124,
+            "hyperspace": false
+          },
+          {
+            "name": "Delta Squadron Pilot",
+            "initiative": 1,
+            "limited": 0,
+            "cost": 69,
+            "xws": "deltasquadronpilot",
+            "text": "In addition to its missile launchers and six wingtip laser cannons, the formidable TIE defender is equipped with deflector shields and a hyperdrive.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_126.png",
+            "shipAbility": {
+              "name": "Full Throttle",
+              "text": "After you fully execute a speed 3-5 maneuver, you may perform an [Evade] action."
+            },
+            "slots": ["Sensor", "Cannon", "Missile"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_126.jpg",
+            "ffg": 126,
+            "hyperspace": false
+          },
+          {
+            "name": "Onyx Squadron Ace",
+            "initiative": 4,
+            "limited": 0,
+            "cost": 75,
+            "xws": "onyxsquadronace",
+            "text": "The experimental TIE defender outclasses all other contemporary starfighters, though its size, speed, and array of weapons come at a tremendous cost in credits.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_125.png",
+            "shipAbility": {
+              "name": "Full Throttle",
+              "text": "After you fully execute a speed 3-5 maneuver, you may perform an [Evade] action."
+            },
+            "slots": ["Talent", "Sensor", "Cannon", "Missile"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_125.jpg",
+            "ffg": 125,
+            "hyperspace": false
+          },
+          {
+            "name": "Rexler Brath",
+            "caption": "Onyx Leader",
+            "initiative": 5,
+            "limited": 1,
+            "cost": 81,
+            "xws": "rexlerbrath",
+            "ability": "After you perform an attack that hits, if you are evading, expose 1 of the defender's damage cards.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_122.png",
+            "shipAbility": {
+              "name": "Full Throttle",
+              "text": "After you fully execute a speed 3-5 maneuver, you may perform an [Evade] action."
+            },
+            "slots": ["Talent", "Sensor", "Cannon", "Missile"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_122.jpg",
+            "ffg": 122,
+            "hyperspace": false
+          }
+        ]
+      },
+      "TIE Interceptor":{
+        "name": "TIE Interceptor",
+        "xws": "tieininterceptor",
+        "ffg": 41,
+        "size": "Small",
+        "dial": [
+          "1TW",
+          "1YW",
+          "2TB",
+          "2BB",
+          "2FB",
+          "2NB",
+          "2YB",
+          "3LR",
+          "3TW",
+          "3BW",
+          "3FB",
+          "3NW",
+          "3YW",
+          "3PR",
+          "4FB",
+          "4KR",
+          "5FW"
+        ],
+        "faction": "Galactic Empire",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 3 },
+          { "type": "agility", "value": 3 },
+          { "type": "hull", "value": 3 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Evade" },
+          { "difficulty": "White", "type": "Barrel Roll" },
+          { "difficulty": "White", "type": "Boost" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_TIEInterceptor.png",
+        "pilots": [
+          {
+            "name": "Alpha Squadron Pilot",
+            "initiative": 1,
+            "limited": 0,
+            "cost": 34,
+            "xws": "alphasquadronpilot",
+            "text": "Sienar Fleet Systems designed the TIE interceptor with four wing-mounted laser cannons, a dramatic increase in firepower over its predecessors.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_106.png",
+            "shipAbility": {
+              "name": "Autothrusters",
+              "text": "After you perform an action, you may perform a red [Barrel Roll] or red [Boost] action."
+            },
+            "slots": ["Modification", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_106.jpg",
+            "ffg": 106,
+            "hyperspace": true
+          },
+          {
+            "name": "Saber Squadron Ace",
+            "initiative": 4,
+            "limited": 0,
+            "cost": 40,
+            "xws": "sabersquadronace",
+            "text": "Led by Baron Soontir Fel, the pilots of Saber Squadron are among the Empire's best. Their TIE interceptors are marked with red stripes to designate pilots with at least ten confirmed kills.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_105.png",
+            "shipAbility": {
+              "name": "Autothrusters",
+              "text": "After you perform an action, you may perform a red [Barrel Roll] or red [Boost] action."
+            },
+            "slots": ["Talent", "Modification", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_105.jpg",
+            "ffg": 105,
+            "hyperspace": true
+          },
+          {
+            "name": "Soontir Fel",
+            "caption": "Ace of Legend",
+            "initiative": 6,
+            "limited": 1,
+            "cost": 53,
+            "xws": "soontirfel",
+            "ability": "At the start of the Engagement Phase, if there is an enemy ship in your [Bullseye Arc], gain 1 focus token.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_103.png",
+            "shipAbility": {
+              "name": "Autothrusters",
+              "text": "After you perform an action, you may perform a red [Barrel Roll] or red [Boost] action."
+            },
+            "slots": ["Talent", "Modification", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_103.jpg",
+            "ffg": 103,
+            "hyperspace": true
+          },
+          {
+            "name": "Turr Phennir",
+            "caption": "Ambitious Ace",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 44,
+            "xws": "turrphennir",
+            "ability": "After you perform an attack, you may perform a [Barrel Roll] or [Boost] action, even if you are stressed.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_104.png",
+            "shipAbility": {
+              "name": "Autothrusters",
+              "text": "After you perform an action, you may perform a red [Barrel Roll] or red [Boost] action."
+            },
+            "slots": ["Talent", "Modification", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_104.jpg",
+            "ffg": 104,
+            "hyperspace": true
+          }
+        ]
+      },
+      "TIE/ln Fighter":{
+        "name": "TIE/ln Fighter",
+        "xws": "tielnfighter",
+        "ffg": 11,
+        "size": "Small",
+        "dial": [
+          "1TW",
+          "1YW",
+          "2TW",
+          "2BB",
+          "2FB",
+          "2NB",
+          "2YW",
+          "3TW",
+          "3BW",
+          "3FB",
+          "3NW",
+          "3YW",
+          "3KR",
+          "4FW",
+          "4KR",
+          "5FW"
+        ],
+        "faction": "Galactic Empire",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 2 },
+          { "type": "agility", "value": 3 },
+          { "type": "hull", "value": 3 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Evade" },
+          { "difficulty": "White", "type": "Barrel Roll" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_TIEFighter.png",
+        "pilots": [
+          {
+            "name": "\"Howlrunner\"",
+            "caption": "Obsidian Leader",
+            "initiative": 5,
+            "limited": 1,
+            "cost": 40,
+            "xws": "howlrunner",
+            "ability": "While a friendly ship at range 0-1 performs a primary attack, that ship may reroll 1 attack die.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_81.png",
+            "slots": ["Talent", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_81.jpg",
+            "ffg": 81,
+            "hyperspace": true
+          },
+          {
+            "name": "\"Mauler\" Mithel",
+            "caption": "Black Two",
+            "initiative": 5,
+            "limited": 1,
+            "cost": 32,
+            "xws": "maulermithel",
+            "ability": "While you perform an attack at attack range 1, roll 1 additional attack die.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_80.png",
+            "slots": ["Talent", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_80.jpg",
+            "ffg": 80,
+            "hyperspace": true
+          },
+          {
+            "name": "\"Night Beast\"",
+            "caption": "Obsidian Two",
+            "initiative": 2,
+            "limited": 1,
+            "cost": 26,
+            "xws": "nightbeast",
+            "ability": "After you fully execute a blue maneuver, you may perform a [Focus] action.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_88.png",
+            "slots": ["Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_88.jpg",
+            "ffg": 88,
+            "hyperspace": true
+          },
+          {
+            "name": "\"Scourge\" Skutu",
+            "caption": "Seasoned Veteran",
+            "initiative": 5,
+            "limited": 1,
+            "cost": 32,
+            "xws": "scourgeskutu",
+            "ability": "While you perform an attack against a defender in your [Bullseye Arc], roll 1 additional attack die.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_82.png",
+            "slots": ["Talent", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_82.jpg",
+            "ffg": 82,
+            "hyperspace": true
+          },
+          {
+            "name": "\"Wampa\"",
+            "caption": "Black Eleven",
+            "initiative": 1,
+            "limited": 1,
+            "cost": 30,
+            "xws": "wampa",
+            "ability": "While you perform an attack, you may spend 1 [Charge] to roll 1 additional attack die. After defending, lose 1 [Charge].",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_89.png",
+            "charges": { "value": 1, "recovers": 1 },
+            "slots": ["Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_89.jpg",
+            "ffg": 89,
+            "hyperspace": true
+          },
+          {
+            "name": "Academy Pilot",
+            "initiative": 1,
+            "limited": 0,
+            "cost": 23,
+            "xws": "academypilot",
+            "text": "The Galactic Empire uses the fast and agile TIE/ln, developed by Sienar Fleet Systems and produced in staggering quantity, as its primary starfighter.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_92.png",
+            "alt": [
+              {
+                "image": "https://images-cdn.fantasyflightgames.com/filer_public/c9/4e/c94efa45-9cf7-4167-8e41-50d27d300f12/op066-academy-pilot.png",
+                "source": "X-Wing Second Edition Launch Party"
+              }
+            ],
+            "slots": ["Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_92.jpg",
+            "ffg": 92,
+            "hyperspace": true
+          },
+          {
+            "name": "Black Squadron Ace",
+            "initiative": 3,
+            "limited": 0,
+            "cost": 26,
+            "xws": "blacksquadronace",
+            "text": "The elite TIE/ln pilots of Black Squadron accompanied Darth Vader on a devastating strike against the Rebel forces at the Battle of Yavin.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_90.png",
+            "slots": ["Talent", "Modification"],
+            "alt": [
+              {
+                "image": "https://images-cdn.fantasyflightgames.com/filer_public/fe/2b/fe2b0b19-b983-4665-aa8a-769fc2e03f64/op086-obsidian-squadron-pilot.png",
+                "source": "Gen Con Indy 2018"
+              }
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_90.jpg",
+            "ffg": 90,
+            "hyperspace": true
+          },
+          {
+            "name": "Del Meeko",
+            "caption": "Inferno Three",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 30,
+            "xws": "delmeeko",
+            "ability": "While a friendly ship at range 0-2 defends against a damaged attacker, the defender may reroll 1 defense die.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_85.png",
+            "slots": ["Talent", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_85.jpg",
+            "ffg": 85,
+            "hyperspace": true
+          },
+          {
+            "name": "Gideon Hask",
+            "caption": "Inferno Two",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 30,
+            "xws": "gideonhask",
+            "ability": "While you perform an attack against a damaged defender, roll 1 additional attack die.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_84.png",
+            "slots": ["Talent", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_84.jpg",
+            "ffg": 84,
+            "hyperspace": true
+          },
+          {
+            "name": "Iden Versio",
+            "caption": "Inferno Leader",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 40,
+            "xws": "idenversio",
+            "ability": "Before a friendly TIE/ln fighter at range 0-1 would suffer 1 or more damage, you may spend 1 [Charge]. If you do, prevent that damage.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_83.png",
+            "charges": { "value": 1, "recovers": 0 },
+            "slots": ["Talent", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_83.jpg",
+            "ffg": 83,
+            "hyperspace": true
+          },
+          {
+            "name": "Obsidian Squadron Pilot",
+            "initiative": 2,
+            "limited": 0,
+            "cost": 24,
+            "xws": "obsidiansquadronpilot",
+            "text": "The TIE fighter's Twin Ion Engine system was designed for speed, making the TIE/ln one of the most maneuverable starships ever mass-produced.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_91.png",
+            "alt": [
+              {
+                "image": "https://images-cdn.fantasyflightgames.com/filer_public/12/55/12552f53-decc-49ff-8fe2-e4285d4ff31e/op066-obsidian-squadron-pilot.png",
+                "source": "X-Wing Second Edition Launch Party"
+              }
+            ],
+            "slots": ["Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_91.jpg",
+            "ffg": 91,
+            "hyperspace": true
+          },
+          {
+            "name": "Seyn Marana",
+            "caption": "Inferno Four",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 30,
+            "xws": "seynmarana",
+            "ability": "While you perform an attack, you may spend 1 [Critical Hit] result. If you do, deal 1 facedown damage card to the defender, then cancel your remaining results.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_86.png",
+            "slots": ["Talent", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_86.jpg",
+            "ffg": 86,
+            "hyperspace": true
+          },
+          {
+            "name": "Valen Rudor",
+            "caption": "Braggadocious Baron",
+            "initiative": 3,
+            "limited": 1,
+            "cost": 28,
+            "xws": "valenrudor",
+            "ability": "After a friendly ship at range 0-1 defends (after damage is resolved, if any), you may perform an action.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_87.png",
+            "slots": ["Talent", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_87.jpg",
+            "ffg": 87,
+            "hyperspace": true
+          }
+        ]
+      },
+      "TIE/ph Phantom":{
+        "name": "TIE/ph Phantom",
+        "xws": "tiephphantom",
+        "ffg": 27,
+        "size": "Small",
+        "dial": [
+          "1TW",
+          "1BW",
+          "1NW",
+          "1YW",
+          "2TW",
+          "2BB",
+          "2FB",
+          "2NB",
+          "2YW",
+          "3TW",
+          "3BW",
+          "3FB",
+          "3NW",
+          "3YW",
+          "3KR",
+          "4FW",
+          "4KR"
+        ],
+        "faction": "Galactic Empire",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 3 },
+          { "type": "agility", "value": 2 },
+          { "type": "hull", "value": 3 },
+          { "type": "shields", "value": 2 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Evade" },
+          { "difficulty": "White", "type": "Barrel Roll" },
+          { "difficulty": "White", "type": "Cloak" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_TIEPhantom.png",
+        "pilots": [
+          {
+            "name": "\"Echo\"",
+            "caption": "Slippery Trickster",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 51,
+            "xws": "echo",
+            "ability": "While you decloak, you must use the [2 [Bank Left]] or [2 [Bank Right]] template instead of the [2 [Straight]] template.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_132.png",
+            "shipAbility": {
+              "name": "Stygium Array",
+              "text": "After you decloak, you may perform an [Evade] action. At the start of the End Phase, you may spend 1 evade token to gain 1 cloak token."
+            },
+            "slots": ["Talent", "Sensor", "Modification", "Gunner"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_132.jpg",
+            "ffg": 132,
+            "hyperspace": false
+          },
+          {
+            "name": "\"Whisper\"",
+            "caption": "Soft-Spoken Slayer",
+            "initiative": 5,
+            "limited": 1,
+            "cost": 57,
+            "xws": "whisper",
+            "ability": "After you perform an attack that hits, gain 1 evade token.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_131.png",
+            "shipAbility": {
+              "name": "Stygium Array",
+              "text": "After you decloak, you may perform an [Evade] action. At the start of the End Phase, you may spend 1 evade token to gain 1 cloak token."
+            },
+            "slots": ["Talent", "Sensor", "Modification", "Gunner"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_131.jpg",
+            "ffg": 131,
+            "hyperspace": false
+          },
+          {
+            "name": "Imdaar Test Pilot",
+            "initiative": 3,
+            "limited": 0,
+            "cost": 44,
+            "xws": "imdaartestpilot",
+            "text": "The primary result of a hidden research facility on Imdaar Alpha, the TIE phantom achieves what many thought was impossible: a small starfighter equipped with an advanced cloaking device.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_134.png",
+            "shipAbility": {
+              "name": "Stygium Array",
+              "text": "After you decloak, you may perform an [Evade] action. At the start of the End Phase, you may spend 1 evade token to gain 1 cloak token."
+            },
+            "slots": ["Sensor", "Modification", "Gunner"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_134.jpg",
+            "ffg": 134,
+            "hyperspace": false
+          },
+          {
+            "name": "Sigma Squadron Ace",
+            "initiative": 4,
+            "limited": 0,
+            "cost": 48,
+            "xws": "sigmasquadronace",
+            "text": "Featuring a hyperdrive and shields, the TIE phantom is also equipped with five laser cannons, giving it substantial firepower for an Imperial fighter.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_133.png",
+            "shipAbility": {
+              "name": "Stygium Array",
+              "text": "After you decloak, you may perform an [Evade] action. At the start of the End Phase, you may spend 1 evade token to gain 1 cloak token."
+            },
+            "slots": ["Talent", "Sensor", "Modification", "Gunner"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_133.jpg",
+            "ffg": 133,
+            "hyperspace": false
+          }
+        ]
+      },
+      "TIE Reaper":{
+        "name": "TIE Reaper",
+        "xws": "tiereaper",
+        "ffg": 43,
+        "size": "Medium",
+        "dial": [
+          "0OR",
+          "1LR",
+          "1TR",
+          "1BB",
+          "1FB",
+          "1NB",
+          "1YR",
+          "1PR",
+          "2TR",
+          "2BW",
+          "2FB",
+          "2NW",
+          "2YR",
+          "3BW",
+          "3FB",
+          "3NW"
+        ],
+        "faction": "Galactic Empire",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 3 },
+          { "type": "agility", "value": 1 },
+          { "type": "hull", "value": 6 },
+          { "type": "shields", "value": 2 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Evade" },
+          { "difficulty": "Red", "type": "Coordinate" },
+          { "difficulty": "White", "type": "Jam" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_TIEReaper.png",
+        "pilots": [
+          {
+            "name": "\"Vizier\"",
+            "caption": "Ruthless Tactician",
+            "initiative": 2,
+            "limited": 1,
+            "cost": 45,
+            "xws": "vizier",
+            "ability": "After you fully execute a speed 1 maneuver using your Adaptive Ailerons ship ability, you may perform a [Coordinate] action. If you do, skip your Perform Action step.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_115.png",
+            "shipAbility": {
+              "name": "Adaptive Ailerons",
+              "text": "Before you reveal your dial, if you are not stressed, you must execute a white [1 [Bank Left]], [1 [Straight]], or [1 [Bank Right]] maneuver."
+            },
+            "slots": ["Crew", "Crew", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_115.jpg",
+            "ffg": 115,
+            "hyperspace": true
+          },
+          {
+            "name": "Captain Feroph",
+            "caption": "Imperial Courier",
+            "initiative": 3,
+            "limited": 1,
+            "cost": 47,
+            "xws": "captainferoph",
+            "ability": "While you defend, if the attacker does not have any green tokens, you may change 1 of your blank or [Focus] results to an [Evade] result.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_114.png",
+            "shipAbility": {
+              "name": "Adaptive Ailerons",
+              "text": "Before you reveal your dial, if you are not stressed, you must execute a white [1 [Bank Left]], [1 [Straight]], or [1 [Bank Right]] maneuver."
+            },
+            "slots": ["Talent", "Crew", "Crew", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_114.jpg",
+            "ffg": 114,
+            "hyperspace": true
+          },
+          {
+            "name": "Major Vermeil",
+            "caption": "Veteran of Scarif",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 49,
+            "xws": "majorvermeil",
+            "ability": "While you perform an attack, if the defender does not have any green tokens, you may change 1 of your blank or [Focus] results to a [Hit] result.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_113.png",
+            "shipAbility": {
+              "name": "Adaptive Ailerons",
+              "text": "Before you reveal your dial, if you are not stressed, you must execute a white [1 [Bank Left]], [1 [Straight]], or [1 [Bank Right]] maneuver."
+            },
+            "slots": ["Talent", "Crew", "Crew", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_113.jpg",
+            "ffg": 113,
+            "hyperspace": true
+          },
+          {
+            "name": "Scarif Base Pilot",
+            "initiative": 1,
+            "limited": 0,
+            "cost": 41,
+            "xws": "scarifbasepilot",
+            "text": "The TIE reaper was designed to ferry elite troops to flashpoints on the battlefield, notably carrying Director Krennic's dreaded death troopers at the Battle of Scarif.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_116.png",
+            "alt": [
+              {
+                "image": "https://images-cdn.fantasyflightgames.com/filer_public/d3/22/d3220543-7735-44fc-80a8-90507ca363c8/g18x2-scarif-base-pilot-2.png",
+                "source": "Season Two 2018"
+              }
+            ],
+            "shipAbility": {
+              "name": "Adaptive Ailerons",
+              "text": "Before you reveal your dial, if you are not stressed, you must execute a white [1 [Bank Left]], [1 [Straight]], or [1 [Bank Right]] maneuver."
+            },
+            "slots": ["Crew", "Crew", "Modification"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_116.jpg",
+            "ffg": 116,
+            "hyperspace": true
+          }
+        ]
+      },
+      "TIE/sa Bomber":{
+        "name": "TIE/sa Bomber",
+        "xws": "tiesabomber",
+        "ffg": 19,
+        "size": "Small",
+        "dial": [
+          "1BW",
+          "1FB",
+          "1NW",
+          "2TW",
+          "2BB",
+          "2FB",
+          "2NB",
+          "2YW",
+          "3TW",
+          "3BW",
+          "3FB",
+          "3NW",
+          "3YW",
+          "3KR",
+          "4FW",
+          "5KR"
+        ],
+        "faction": "Galactic Empire",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 2 },
+          { "type": "agility", "value": 2 },
+          { "type": "hull", "value": 6 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Lock" },
+          {
+            "difficulty": "White",
+            "linked": { "difficulty": "Red", "type": "Lock" },
+            "type": "Barrel Roll"
+          },
+          { "difficulty": "Red", "type": "Reload" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_TIEBomber.png",
+        "pilots": [
+          {
+            "name": "\"Deathfire\"",
+            "caption": "Unflinching Diehard",
+            "initiative": 2,
+            "limited": 1,
+            "cost": 34,
+            "xws": "deathfire",
+            "ability": "After you are destroyed, before you are removed, you may perform an attack and drop or launch 1 device.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_110.png",
+            "shipAbility": {
+              "name": "Nimble Bomber",
+              "text": "If you would drop a device using a [Straight] template, you may use a [Bank Left] or [Bank Right] template of the same speed instead."
+            },
+            "slots": [
+              "Torpedo",
+              "Missile",
+              "Missile",
+              "Device",
+              "Device",
+              "Modification",
+              "Gunner"
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_110.jpg",
+            "ffg": 110,
+            "hyperspace": true
+          },
+          {
+            "name": "Captain Jonus",
+            "caption": "Disciplined Instructor",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 43,
+            "xws": "captainjonus",
+            "ability": "While a friendly ship at range 0-1 performs a [Torpedo] or [Missile] attack, that ship may reroll up to 2 attack dice.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_108.png",
+            "shipAbility": {
+              "name": "Nimble Bomber",
+              "text": "If you would drop a device using a [Straight] template, you may use a [Bank Left] or [Bank Right] template of the same speed instead."
+            },
+            "slots": [
+              "Talent",
+              "Torpedo",
+              "Missile",
+              "Missile",
+              "Device",
+              "Device",
+              "Modification",
+              "Gunner"
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_108.jpg",
+            "ffg": 108,
+            "hyperspace": true
+          },
+          {
+            "name": "Gamma Squadron Ace",
+            "initiative": 3,
+            "limited": 0,
+            "cost": 32,
+            "xws": "gammasquadronace",
+            "text": "Though it sacrifices a degree of speed and maneuverability compared to a TIE/ln, the TIE bomber's increased payload can carry enough firepower to destroy virtually any enemy target.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_111.png",
+            "shipAbility": {
+              "name": "Nimble Bomber",
+              "text": "If you would drop a device using a [Straight] template, you may use a [Bank Left] or [Bank Right] template of the same speed instead."
+            },
+            "slots": [
+              "Talent",
+              "Torpedo",
+              "Missile",
+              "Missile",
+              "Device",
+              "Device",
+              "Modification",
+              "Gunner"
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_111.jpg",
+            "ffg": 111,
+            "hyperspace": true
+          },
+          {
+            "name": "Major Rhymer",
+            "caption": "Scimitar Leader",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 38,
+            "xws": "majorrhymer",
+            "ability": "While you perform a [Torpedo] or [Missile] attack, you may increase or decrease the range requirement by 1, to a limit of 0-3.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_109.png",
+            "shipAbility": {
+              "name": "Nimble Bomber",
+              "text": "If you would drop a device using a [Straight] template, you may use a [Bank Left] or [Bank Right] template of the same speed instead."
+            },
+            "slots": [
+              "Talent",
+              "Torpedo",
+              "Missile",
+              "Missile",
+              "Device",
+              "Device",
+              "Modification",
+              "Gunner"
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_109.jpg",
+            "ffg": 109,
+            "hyperspace": true
+          },
+          {
+            "name": "Scimitar Squadron Pilot",
+            "initiative": 2,
+            "limited": 0,
+            "cost": 29,
+            "xws": "scimitarsquadronpilot",
+            "text": "The TIE/sa is exceptionally nimble for a bomber, allowing it to pinpoint its target while avoiding excessive collateral damage to the surrounding area.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_112.png",
+            "shipAbility": {
+              "name": "Nimble Bomber",
+              "text": "If you would drop a device using a [Straight] template, you may use a [Bank Left] or [Bank Right] template of the same speed instead."
+            },
+            "slots": [
+              "Torpedo",
+              "Missile",
+              "Missile",
+              "Device",
+              "Device",
+              "Modification",
+              "Gunner"
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_112.jpg",
+            "ffg": 112,
+            "hyperspace": true
+          },
+          {
+            "name": "Tomax Bren",
+            "caption": "Brash Maverick",
+            "initiative": 5,
+            "limited": 1,
+            "cost": 36,
+            "xws": "tomaxbren",
+            "ability": "After you perform a [Reload] action, you may recover 1 [Charge] token on 1 of your equipped [Talent] upgrade cards.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_107.png",
+            "shipAbility": {
+              "name": "Nimble Bomber",
+              "text": "If you would drop a device using a [Straight] template, you may use a [Bank Left] or [Bank Right] template of the same speed instead."
+            },
+            "slots": [
+              "Talent",
+              "Torpedo",
+              "Missile",
+              "Missile",
+              "Device",
+              "Device",
+              "Modification",
+              "Gunner"
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_107.jpg",
+            "ffg": 107,
+            "hyperspace": true
+          }
+        ]
+      },
+      "TIE/sk Striker":{
+        "name": "TIE/sk Striker",
+        "xws": "tieskstriker",
+        "ffg": 16,
+        "size": "Small",
+        "dial": [
+          "1TW",
+          "1BB",
+          "1FB",
+          "1NB",
+          "1YW",
+          "1KR",
+          "2LR",
+          "2TW",
+          "2BB",
+          "2FB",
+          "2NB",
+          "2YW",
+          "2PR",
+          "3BW",
+          "3FB",
+          "3NW"
+        ],
+        "faction": "Galactic Empire",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 3 },
+          { "type": "agility", "value": 2 },
+          { "type": "hull", "value": 4 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Evade" },
+          { "difficulty": "White", "type": "Barrel Roll" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_TIEStriker.png",
+        "pilots": [
+          {
+            "name": "\"Countdown\"",
+            "caption": "Death Defier",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 44,
+            "xws": "countdown",
+            "ability": "While you defend, after the Neutralize Results step, if you are not stressed, you may suffer 1 [Hit] damage and gain 1 stress token. If you do, cancel all dice results.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_118.png",
+            "shipAbility": {
+              "name": "Adaptive Ailerons",
+              "text": "Before you reveal your dial, if you are not stressed, you must execute a white [1 [Bank Left]], [1 [Straight]], or [1 [Bank Right]] maneuver."
+            },
+            "slots": ["Talent", "Device", "Modification", "Gunner"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_118.jpg",
+            "ffg": 118,
+            "hyperspace": true
+          },
+          {
+            "name": "\"Duchess\"",
+            "caption": "Urbane Ace",
+            "initiative": 5,
+            "limited": 1,
+            "cost": 42,
+            "xws": "duchess",
+            "ability": "You may choose not to use your Adaptive Ailerons. You may use your Adaptive Ailerons even while stressed.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_117.png",
+            "shipAbility": {
+              "name": "Adaptive Ailerons",
+              "text": "Before you reveal your dial, if you are not stressed, you must execute a white [1 [Bank Left]], [1 [Straight]], or [1 [Bank Right]] maneuver."
+            },
+            "slots": ["Talent", "Device", "Modification", "Gunner"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_117.jpg",
+            "ffg": 117,
+            "hyperspace": true
+          },
+          {
+            "name": "\"Pure Sabacc\"",
+            "caption": "Confident Gambler",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 44,
+            "xws": "puresabacc",
+            "ability": "While you perform an attack, if you have 1 or fewer damage cards, you may roll 1 additional attack die.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_119.png",
+            "shipAbility": {
+              "name": "Adaptive Ailerons",
+              "text": "Before you reveal your dial, if you are not stressed, you must execute a white [1 [Bank Left]], [1 [Straight]], or [1 [Bank Right]] maneuver."
+            },
+            "slots": ["Talent", "Device", "Modification", "Gunner"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_119.jpg",
+            "ffg": 119,
+            "hyperspace": true
+          },
+          {
+            "name": "Black Squadron Scout",
+            "initiative": 3,
+            "limited": 0,
+            "cost": 38,
+            "xws": "blacksquadronscout",
+            "text": "These heavily armed atmospheric craft employ their specialized moveable wings to gain additional speed and maneuverability.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_120.png",
+            "shipAbility": {
+              "name": "Adaptive Ailerons",
+              "text": "Before you reveal your dial, if you are not stressed, you must execute a white [1 [Bank Left]], [1 [Straight]], or [1 [Bank Right]] maneuver."
+            },
+            "slots": ["Talent", "Device", "Modification", "Gunner"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_120.jpg",
+            "ffg": 120,
+            "hyperspace": true
+          },
+          {
+            "name": "Planetary Sentinel",
+            "initiative": 1,
+            "limited": 0,
+            "cost": 34,
+            "xws": "planetarysentinel",
+            "text": "To protect its many military installations, the Empire requires a swift and vigilant defense force.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_121.png",
+            "shipAbility": {
+              "name": "Adaptive Ailerons",
+              "text": "Before you reveal your dial, if you are not stressed, you must execute a white [1 [Bank Left]], [1 [Straight]], or [1 [Bank Right]] maneuver."
+            },
+            "slots": ["Device", "Modification", "Gunner"],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_121.jpg",
+            "ffg": 121,
+            "hyperspace": true
+          }
+        ]
+      },
+      "VT-49 Decimator":{
+        "name": "VT-49 Decimator",
+        "xws": "vt49decimator",
+        "ffg": 28,
+        "size": "Large",
+        "dial": [
+          "1TR",
+          "1BB",
+          "1FB",
+          "1NB",
+          "1YR",
+          "2TW",
+          "2BW",
+          "2FB",
+          "2NW",
+          "2YW",
+          "3TW",
+          "3BW",
+          "3FW",
+          "3NW",
+          "3YW",
+          "4FW"
+        ],
+        "faction": "Galactic Empire",
+        "stats": [
+          { "arc": "Double Turret Arc", "type": "attack", "value": 3 },
+          { "type": "agility", "value": 0 },
+          { "type": "hull", "value": 12 },
+          { "type": "shields", "value": 4 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Lock" },
+          { "difficulty": "White", "type": "Reinforce" },
+          { "difficulty": "White", "type": "Rotate Arc" },
+          { "difficulty": "Red", "type": "Coordinate" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_Decimator.png",
+        "pilots": [
+          {
+            "name": "Captain Oicunn",
+            "caption": "Inspired Tactician",
+            "initiative": 3,
+            "limited": 1,
+            "cost": 74,
+            "xws": "captainoicunn",
+            "ability": "You can perform primary attacks at range 0.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_146.png",
+            "slots": [
+              "Talent",
+              "Torpedo",
+              "Crew",
+              "Crew",
+              "Crew",
+              "Device",
+              "Modification",
+              "Title",
+              "Gunner"
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_146.jpg",
+            "ffg": 146,
+            "hyperspace": true
+          },
+          {
+            "name": "Patrol Leader",
+            "initiative": 2,
+            "limited": 0,
+            "cost": 68,
+            "xws": "patrolleader",
+            "text": "To be granted command of a VT-49 Decimator is seen as a significant promotion for a middling officer of the Imperial Navy.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_148.png",
+            "slots": [
+              "Torpedo",
+              "Crew",
+              "Crew",
+              "Crew",
+              "Device",
+              "Modification",
+              "Title",
+              "Gunner"
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_148.jpg",
+            "ffg": 148,
+            "hyperspace": true
+          },
+          {
+            "name": "Rear Admiral Chiraneau",
+            "caption": "Advisor to Admiral Piett",
+            "initiative": 5,
+            "limited": 1,
+            "cost": 76,
+            "xws": "rearadmiralchiraneau",
+            "ability": "While you perform an attack, if you are reinforced and the defender is in the [Full Front Arc] or [Full Rear Arc] matching your reinforce token, you may change 1 of your [Focus] results to a [Critical Hit] result.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/Card_Pilot_147.png",
+            "slots": [
+              "Talent",
+              "Torpedo",
+              "Crew",
+              "Crew",
+              "Crew",
+              "Device",
+              "Modification",
+              "Title",
+              "Gunner"
+            ],
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/Card_art_XW_P_147.jpg",
+            "ffg": 147,
+            "hyperspace": true
+          }
+        ]
+      }
+    },
+    "Galactic Republic":{
 
-    ],
-    "Galactic Republic":[
+    },
+    "Rebel Alliance":{
 
-    ],
-    "Rebel Alliance":[
+    },
+    "Resistance":{
+      "MG-100 StarFortress":{
+        "name": "MG-100 StarFortress",
+        "xws": "mg100starfortress",
+        "ffg": 55,
+        "size": "Large",
+        "dial": [
+          "0OR",
+          "1TR",
+          "1BB",
+          "1FB",
+          "1NB",
+          "1YR",
+          "2TW",
+          "2BW",
+          "2FB",
+          "2NW",
+          "2YW",
+          "3BR",
+          "3FW",
+          "3NR"
+        ],
+        "faction": "Resistance",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 3 },
+          { "arc": "Double Turret Arc", "type": "attack", "value": 2 },
+          { "type": "agility", "value": 1 },
+          { "type": "hull", "value": 9 },
+          { "type": "shields", "value": 3 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Lock" },
+          { "difficulty": "White", "type": "Rotate Arc" },
+          { "difficulty": "White", "type": "Reload" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_StarFortress.png",
+        "pilots": [
+          {
+            "name": "Cobalt Squadron Bomber",
+            "initiative": 1,
+            "limited": 0,
+            "xws": "cobaltsquadronbomber",
+            "text": "Whether the ordnance silos of their StarFortresses are loaded with proton bombs or relief supplies, the heroic crews of Cobalt Squadron dedicate their lives to making a difference in the galaxy.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/6b6a3bb8049699e2d66fe09531e8bc00.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/514351d5c41a8341ea5da5673269d917.jpg",
+            "cost": 56,
+            "slots": [
+              "Sensor",
+              "Crew",
+              "Device",
+              "Device",
+              "Modification",
+              "Gunner",
+              "Gunner",
+              "Tech"
+            ],
+            "ffg": 434,
+            "hyperspace": true
+          },
+          {
+            "name": "Cat",
+            "caption": "Cobalt Wasp",
+            "initiative": 1,
+            "limited": 1,
+            "xws": "cat",
+            "ability": "While you perform a primary attack, if the defender is at range 0-1 of at least 1 friendly device, roll 1 additional die.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/b386dc25736682ebc785b15551de903b.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/d927ccf08a9444340378449fe71e9f70.jpg",
+            "cost": 57,
+            "slots": [
+              "Sensor",
+              "Crew",
+              "Device",
+              "Device",
+              "Modification",
+              "Gunner",
+              "Gunner",
+              "Tech"
+            ],
+            "ffg": 433,
+            "hyperspace": true
+          },
+          {
+            "name": "Vennie",
+            "caption": "Crimson Cutter",
+            "initiative": 2,
+            "limited": 1,
+            "xws": "vennie",
+            "ability": "While you defend, if the attacker is in a friendly ship's [Single Turret Arc], you may add 1 [Focus] result to your roll.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/0d494986a24e6c55efae066a43161b0d.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/511b878f719e9fa59a50cdf980d10ead.jpg",
+            "cost": 60,
+            "slots": [
+              "Sensor",
+              "Crew",
+              "Device",
+              "Device",
+              "Modification",
+              "Gunner",
+              "Gunner",
+              "Tech"
+            ],
+            "ffg": 448,
+            "hyperspace": true
+          },
+          {
+            "name": "Ben Teene",
+            "caption": "Crimson Bolide",
+            "initiative": 3,
+            "limited": 1,
+            "xws": "benteene",
+            "ability": "After you perform an attack, if the defender is in your [Single Turret Arc], assign the Rattled condition to the defender.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/c9189c7e510b4d734d4d78c4f595010f.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/74ca7444aec38cb0034b67b04f6aaa76.jpg",
+            "cost": 61,
+            "conditions": ["rattled"],
+            "slots": [
+              "Sensor",
+              "Crew",
+              "Device",
+              "Device",
+              "Modification",
+              "Gunner",
+              "Gunner",
+              "Tech"
+            ],
+            "ffg": 432,
+            "hyperspace": true
+          },
+          {
+            "name": "Edon Kappehl",
+            "caption": "Crimson Hailstorm",
+            "initiative": 3,
+            "limited": 1,
+            "xws": "edonkappehl",
+            "ability": "After you fully execute a blue or white maneuver, if you have not dropped or launched a device this round, you may drop 1 device.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/f58fe0b57dc4a9c878627f0fea9cf1ef.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/bbac51ca4ba44f26d90a53b6c5db5e2c.jpg",
+            "cost": 64,
+            "slots": [
+              "Sensor",
+              "Crew",
+              "Device",
+              "Device",
+              "Modification",
+              "Gunner",
+              "Gunner",
+              "Tech"
+            ],
+            "ffg": 447,
+            "hyperspace": true
+          },
+          {
+            "name": "Finch Dallow",
+            "caption": "Cobalt Hammer",
+            "initiative": 4,
+            "limited": 1,
+            "xws": "finchdallow",
+            "ability": "Before you would drop a bomb, you may place it in the play area touching you instead.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/43d9a0555f719a4cbe1ffe905fd38c46.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/dafd2937accc362f766ca0da3308ccbc.jpg",
+            "cost": 64,
+            "slots": [
+              "Sensor",
+              "Crew",
+              "Device",
+              "Device",
+              "Modification",
+              "Gunner",
+              "Gunner",
+              "Tech"
+            ],
+            "ffg": 431,
+            "hyperspace": true
+          }
+        ]
+      },
+      "Resistance Transport Pod":{
+        "name": "Resistance Transport Pod",
+        "xws": "resistancetransportpod",
+        "size": "Small",
+        "ffg": 65,
+        "dial": [
+          "1TR",
+          "1BB",
+          "1FB",
+          "1NB",
+          "1YR",
+          "2TW",
+          "2BW",
+          "2FB",
+          "2NW",
+          "2YW",
+          "3BR",
+          "3FW",
+          "3NR",
+          "3KR",
+          "4FR"
+        ],
+        "faction": "Resistance",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 2 },
+          { "type": "agility", "value": 2 },
+          { "type": "hull", "value": 3 },
+          { "type": "shields", "value": 1 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "Red", "type": "Lock" },
+          { "difficulty": "Red", "type": "Barrel Roll" },
+          { "difficulty": "Red", "type": "Jam" }
+        ],
+        "pilots": [
+          {
+            "name": "BB-8",
+            "xws": "bb8",
+            "initiative": 3,
+            "limited": 1,
+            "hyperspace": true,
+            "cost": 26,
+            "slots": ["Talent", "Tech", "Crew", "Modification"],
+            "ability": "During the System Phase, you may perform a red [Barrel Roll] or [Boost] action.",
+            "ffg": 573,
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/bbe37aa13822e8c94d9b0950cdd9cdb0.jpg",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/4d2201d40635299aa134acd52c9587af.png",
+            "shipActions": [
+              { "difficulty": "White", "type": "Calculate" },
+              { "difficulty": "Red", "type": "Lock" },
+              { "difficulty": "Red", "type": "Barrel Roll" },
+              { "difficulty": "Red", "type": "Jam" }
+            ],
+            "caption": "Full of Surprises"
+          },
+          {
+            "name": "Rose Tico",
+            "xws": "rosetico",
+            "initiative": 3,
+            "limited": 1,
+            "caption": "Earnest Engineer",
+            "hyperspace": true,
+            "cost": 26,
+            "slots": ["Talent", "Tech", "Crew", "Modification"],
+            "ability": "While you defend or perform an attack, you may reroll up to 1 of your results for each other friendly ship in the attack arc.",
+            "ffg": 574,
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/40cba6527802ef9afa41e4009265873c.jpg",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/1dbf7b355d60f5b3f278522eb702f99f.png"
+          },
+          {
+            "name": "Vi Moradi",
+            "xws": "vimoradi",
+            "initiative": 1,
+            "limited": 1,
+            "caption": "Starling",
+            "hyperspace": true,
+            "cost": 27,
+            "slots": ["Tech", "Crew", "Modification"],
+            "ability": "Setup: After placing forces, assign the Compromising Intel condition to 1 enemy ship.",
+            "conditions": ["compromisingintel"],
+            "ffg": 576,
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/f13328acfd703dc5489fa2249b9f675e.jpg",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/14139a2d20ff13b01bd5810371a89064.png"
+          },
+          {
+            "name": "Finn",
+            "xws": "finn",
+            "initiative": 2,
+            "limited": 1,
+            "caption": "Big Deal",
+            "hyperspace": true,
+            "cost": 29,
+            "slots": ["Talent", "Tech", "Crew", "Modification"],
+            "ability": "While you defend or perform an attack, you may add 1 blank result, or you may gain 1 strain token to add 1 focus result instead.",
+            "ffg": 575,
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/6e5fea21ac8a7ee345fd07f1c42cc81d.jpg",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/311d88e51a039b79e9a422ab3c475288.png"
+          }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_Resistance_Transport_Cockpit_Pod.png"
+      },
+      "Resistance Transport":{
+        "name": "Resistance Transport",
+        "xws": "resistancetransport",
+        "size": "Small",
+        "ffg": 64,
+        "dial": [
+          "0OR",
+          "1AR",
+          "1TR",
+          "1BB",
+          "1FB",
+          "1NB",
+          "1YR",
+          "1DR",
+          "2TW",
+          "2BW",
+          "2FB",
+          "2NW",
+          "2YW",
+          "3BR",
+          "3FW",
+          "3NR",
+          "4FR"
+        ],
+        "faction": "Resistance",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 2 },
+          { "type": "agility", "value": 1 },
+          { "type": "hull", "value": 5 },
+          { "type": "shields", "value": 3 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Lock" },
+          { "difficulty": "Red", "type": "Coordinate" },
+          { "difficulty": "Red", "type": "Jam" }
+        ],
+        "pilots": [
+          {
+            "name": "Cova Nell",
+            "xws": "covanell",
+            "initiative": 4,
+            "limited": 1,
+            "hyperspace": true,
+            "cost": 38,
+            "slots": [
+              "Talent",
+              "Tech",
+              "Cannon",
+              "Torpedo",
+              "Crew",
+              "Crew",
+              "Astromech",
+              "Modification"
+            ],
+            "ability": "While you defend or perform a primary attack, if your revealed maneuver is red, roll 1 additional die.",
+            "ffg": 569,
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/27956dc3600e6e06bf26f9a981205410.jpg",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/a9ae63785f4cadaa28a74858ff1d1bc4.png",
+            "caption": "Evacuation Escort"
+          },
+          {
+            "name": "Pammich Nerro Goode",
+            "xws": "pammichnerrogoode",
+            "initiative": 3,
+            "limited": 1,
+            "caption": "D'Qar Dispatcher",
+            "hyperspace": true,
+            "cost": 36,
+            "slots": [
+              "Tech",
+              "Cannon",
+              "Torpedo",
+              "Crew",
+              "Crew",
+              "Astromech",
+              "Modification"
+            ],
+            "ability": "While you have 2 or fewer stress tokens, you may execute red maneuvers even while stressed.",
+            "ffg": 570,
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/e5f2e692fcaf63d513cd5c7c1294283e.jpg",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/9d7dd5d0851911412dd5c86603a0ea91.png"
+          },
+          {
+            "name": "Nodin Chavdri",
+            "xws": "nodinchavdri",
+            "initiative": 2,
+            "limited": 1,
+            "hyperspace": true,
+            "cost": 36,
+            "slots": [
+              "Tech",
+              "Cannon",
+              "Torpedo",
+              "Crew",
+              "Crew",
+              "Astromech",
+              "Modification"
+            ],
+            "ability": "After you coordinate or are coordinated, if you have 2 or fewer stress tokens, you may perform 1 action on your action bar as a red action, even if you are stressed.",
+            "ffg": 571,
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/b0179494a00c2538a4467793e722db3e.jpg",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/9f41de269cb1ff091487554fb53b2374.png",
+            "caption": "Insubordinate Insurgent"
+          },
+          {
+            "name": "Logistics Division Pilot",
+            "xws": "logisticsdivisionpilot",
+            "initiative": 1,
+            "limited": 0,
+            "text": "Without the support of the New Republic, members of the Resistance often pull double duty as transport pilots or mechanics, putting their skills and technical knowledge to use in the fight against the First Order.",
+            "hyperspace": true,
+            "cost": 32,
+            "slots": [
+              "Tech",
+              "Cannon",
+              "Torpedo",
+              "Crew",
+              "Crew",
+              "Astromech",
+              "Modification"
+            ],
+            "ffg": 572,
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/005545edf9fc1c82464f52edad236b27.jpg",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/57ea37cdb13f52ec3f3e0b745fc9d630.png"
+          }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_Resistance_Transport.png"
+      },
+      "RZ-2 A-wing":{
+        "name": "RZ-2 A-wing",
+        "xws": "rz2awing",
+        "ffg": 54,
+        "size": "Small",
+        "dial": [
+          "1TW",
+          "1YW",
+          "2TB",
+          "2BB",
+          "2FB",
+          "2NB",
+          "2YB",
+          "3LR",
+          "3TW",
+          "3BB",
+          "3FB",
+          "3NB",
+          "3YW",
+          "3PR",
+          "4FB",
+          "5FB",
+          "5KR"
+        ],
+        "faction": "Resistance",
+        "stats": [
+          { "arc": "Single Turret Arc", "type": "attack", "value": 2 },
+          { "type": "agility", "value": 3 },
+          { "type": "hull", "value": 2 },
+          { "type": "shields", "value": 2 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Evade" },
+          { "difficulty": "White", "type": "Lock" },
+          { "difficulty": "White", "type": "Barrel Roll" },
+          { "difficulty": "White", "type": "Boost" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_RZ-2_A-wing.png",
+        "pilots": [
+          {
+            "name": "L'ulo L'ampar",
+            "caption": "Luminous Mentor",
+            "initiative": 5,
+            "limited": 1,
+            "cost": 43,
+            "xws": "lulolampar",
+            "ability": "While you defend or perform a primary attack, if you are stressed, you must roll 1 fewer defense die or 1 additional attack die.",
+            "shipAbility": {
+              "name": "Refined Gyrostabilizers",
+              "text": "You can rotate your [Single Turret Arc] indicator only to your [Front Arc] or [Rear Arc]. After you perform an action, you may perform a red [Boost] or red [Rotate Arc] action."
+            },
+            "slots": ["Talent", "Talent", "Missile", "Tech"],
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/e15d3e2a2fc082b95a64a83df0c96f7f.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/b97a025a7859f54bbc68374ff5d8116e.jpg",
+            "ffg": 435,
+            "hyperspace": true
+          },
+          {
+            "name": "Tallissan Lintra",
+            "caption": "Deadly Approach",
+            "initiative": 5,
+            "limited": 1,
+            "cost": 36,
+            "xws": "tallissanlintra",
+            "ability": "While an enemy ship in your [Bullseye Arc] performs an attack, you may spend 1 [Charge]. If you do, the defender rolls 1 additional die.",
+            "shipAbility": {
+              "name": "Refined Gyrostabilizers",
+              "text": "You can rotate your [Single Turret Arc] indicator only to your [Front Arc] or [Rear Arc]. After you perform an action, you may perform a red [Boost] or red [Rotate Arc] action."
+            },
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/72cb6c4e50b0ad24af0bb84ce0aa53f0.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/ee8c3c26ce6432d7581c5f61392597bc.jpg",
+            "charges": { "value": 1, "recovers": 1 },
+            "slots": ["Talent", "Talent", "Missile", "Tech"],
+            "ffg": 436,
+            "hyperspace": true
+          },
+          {
+            "name": "Zari Bangel",
+            "caption": "Aerial Exhibitionist",
+            "initiative": 3,
+            "limited": 1,
+            "cost": 35,
+            "xws": "zaribangel",
+            "ability": "You do not skip your Perform Action step after you partially execute a maneuver.",
+            "shipAbility": {
+              "name": "Refined Gyrostabilizers",
+              "text": "You can rotate your [Single Turret Arc] indicator only to your [Front Arc] or [Rear Arc]. After you perform an action, you may perform a red [Boost] or red [Rotate Arc] action."
+            },
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/d7f37dbb86bb706dd535e9a65b69149a.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/2fe44e1e5496645c16f4d2189a1746e3.jpg",
+            "slots": ["Talent", "Talent", "Missile", "Tech"],
+            "ffg": 438,
+            "hyperspace": true
+          },
+          {
+            "name": "Greer Sonnel",
+            "caption": "Kothan Si",
+            "initiative": 4,
+            "limited": 1,
+            "cost": 36,
+            "xws": "greersonnel",
+            "ability": "After you fully execute a maneuver, you may rotate your [Single Turret Arc].",
+            "shipAbility": {
+              "name": "Refined Gyrostabilizers",
+              "text": "You can rotate your [Single Turret Arc] indicator only to your [Front Arc] or [Rear Arc]. After you perform an action, you may perform a red [Boost] or red [Rotate Arc] action."
+            },
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/7fc7b194b02ad7af6adf4ef9b79108d1.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/84bf1ce21926d4500b54e122da01b162.jpg",
+            "slots": ["Talent", "Talent", "Missile", "Tech"],
+            "ffg": 437,
+            "hyperspace": true
+          },
+          {
+            "name": "Green Squadron Expert",
+            "initiative": 3,
+            "limited": 0,
+            "cost": 35,
+            "xws": "greensquadronexpert",
+            "text": "Years of field-expedient modifications were standardized in the RZ-2 design, but daring pilots see the ship's improved reliability as a challenge to further push the limits of its performance.",
+            "shipAbility": {
+              "name": "Refined Gyrostabilizers",
+              "text": "You can rotate your [Single Turret Arc] indicator only to your [Front Arc] or [Rear Arc]. After you perform an action, you may perform a red [Boost] or red [Rotate Arc] action."
+            },
+            "slots": ["Talent", "Talent", "Missile", "Tech"],
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/3f7ad9efb4c5af8b4d1f5c07a3c7538b.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/8427bdfb1cf9497a9ab797e2c955ba41.jpg",
+            "ffg": 439,
+            "hyperspace": true
+          },
+          {
+            "name": "Blue Squadron Recruit",
+            "initiative": 1,
+            "limited": 0,
+            "cost": 33,
+            "xws": "bluesquadronrecruit",
+            "text": "Young beings across the galaxy have grown up on tales of heroism in the Galactic Civil War, and many learned to fly in the same cockpits from which their parents fought the Empire.",
+            "shipAbility": {
+              "name": "Refined Gyrostabilizers",
+              "text": "You can rotate your [Single Turret Arc] indicator only to your [Front Arc] or [Rear Arc]. After you perform an action, you may perform a red [Boost] or red [Rotate Arc] action."
+            },
+            "slots": ["Talent", "Missile", "Tech"],
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/e033b2729305ac0b678d6031ada7b2b8.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/3df643a75106a59899e5f32ef56e8a5e.jpg",
+            "ffg": 440,
+            "hyperspace": true
+          }
+        ]
+      },
+      "Scavenged YT-1300":{
+        "name": "Scavenged YT-1300",
+        "xws": "scavengedyt1300",
+        "ffg": 57,
+        "size": "Large",
+        "dial": [
+          "1BW",
+          "1FB",
+          "1NW",
+          "2TW",
+          "2BB",
+          "2FB",
+          "2NB",
+          "2YW",
+          "3LR",
+          "3TW",
+          "3BW",
+          "3FW",
+          "3NW",
+          "3YW",
+          "3PR",
+          "4FR"
+        ],
+        "faction": "Resistance",
+        "stats": [
+          { "arc": "Double Turret Arc", "type": "attack", "value": 3 },
+          { "type": "agility", "value": 1 },
+          { "type": "hull", "value": 8 },
+          { "type": "shields", "value": 3 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Lock" },
+          { "difficulty": "Red", "type": "Boost" },
+          { "difficulty": "Red", "type": "Rotate Arc" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_Falcon_Resistance.png",
+        "pilots": [
+          {
+            "name": "Resistance Sympathizer",
+            "initiative": 2,
+            "limited": 0,
+            "xws": "resistancesympathizer",
+            "text": "After witnessing the Hosnian Cataclysm, some spacers willingly aided the Resistance with whatever ships they had.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/28411b84c1b15f0bfa9928f2206e44f5.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/3e567923957881e9a4dbef46789c7fbf.jpg",
+            "cost": 67,
+            "slots": [
+              "Missile",
+              "Crew",
+              "Crew",
+              "Illicit",
+              "Modification",
+              "Title",
+              "Gunner"
+            ],
+            "ffg": 430,
+            "hyperspace": true
+          },
+          {
+            "name": "Chewbacca",
+            "caption": "Loyal Companion",
+            "initiative": 4,
+            "limited": 1,
+            "xws": "chewbacca-scavengedyt1300",
+            "ability": "After a friendly ship at range 0-3 is destroyed, before that ship is removed, you may perform an action. Then you may perform a bonus attack.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/209a8dece475a265aaf1b5318ba7f08a.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/c40ec30b7df138c4510b08f4f02d54b5.jpg",
+            "cost": 68,
+            "slots": [
+              "Talent",
+              "Missile",
+              "Crew",
+              "Crew",
+              "Illicit",
+              "Modification",
+              "Title",
+              "Gunner"
+            ],
+            "ffg": 429,
+            "hyperspace": true
+          },
+          {
+            "name": "Han Solo",
+            "caption": "Jaded Smuggler",
+            "initiative": 6,
+            "limited": 1,
+            "xws": "hansolo-scavengedyt1300",
+            "ability": "Setup: You can be placed anywhere in the play area beyond range 3 of enemy ships.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/5816bd53c272ed50096e22ae1af2b38a.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/15263defc98e4a54d76ae9224534dacf.jpg",
+            "cost": 71,
+            "slots": [
+              "Talent",
+              "Missile",
+              "Crew",
+              "Crew",
+              "Illicit",
+              "Modification",
+              "Title",
+              "Gunner"
+            ],
+            "ffg": 427,
+            "hyperspace": true
+          },
+          {
+            "name": "Rey",
+            "caption": "Resourceful Scavenger",
+            "initiative": 5,
+            "limited": 1,
+            "xws": "rey",
+            "ability": "While you defend or perform an attack, if the enemy ship is in your [Front Arc], you may spend 1 [Force] to change 1 of your blank results to an [Evade] or [Hit] result.",
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/0ee7006e6cc51d8c08b784c9b770f1b0.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/1ff06aeff0d74773e9c9f3846b38b75d.jpg",
+            "force": { "value": 2, "recovers": 1, "side": ["light"] },
+            "cost": 73,
+            "slots": [
+              "Missile",
+              "Crew",
+              "Crew",
+              "Illicit",
+              "Modification",
+              "Title",
+              "Gunner",
+              "Force Power"
+            ],
+            "ffg": 428,
+            "hyperspace": true
+          }
+        ]
+      },
+      "T-70 X-wing":{
+        "name": "T-70 X-wing",
+        "xws": "t70xwing",
+        "ffg": 53,
+        "size": "Small",
+        "dial": [
+          "1BB",
+          "1FB",
+          "1NB",
+          "2TW",
+          "2BB",
+          "2FB",
+          "2NB",
+          "2YW",
+          "3ER",
+          "3TW",
+          "3BW",
+          "3FB",
+          "3NW",
+          "3YW",
+          "3RR",
+          "4FW",
+          "4KR"
+        ],
+        "faction": "Resistance",
+        "stats": [
+          { "arc": "Front Arc", "type": "attack", "value": 3 },
+          { "type": "agility", "value": 2 },
+          { "type": "hull", "value": 4 },
+          { "type": "shields", "value": 3 }
+        ],
+        "actions": [
+          { "difficulty": "White", "type": "Focus" },
+          { "difficulty": "White", "type": "Lock" },
+          { "difficulty": "White", "type": "Boost" }
+        ],
+        "icon": "https://sb-cdn.fantasyflightgames.com/ship_types/I_X-wing-T70.png",
+        "pilots": [
+          {
+            "name": "Poe Dameron",
+            "caption": "Trigger-Happy Flyboy",
+            "initiative": 6,
+            "limited": 1,
+            "xws": "poedameron",
+            "ability": "After you perform an action, you may spend 1 [Charge] to perform a white action, treating it as red.",
+            "shipAbility": {
+              "name": "Weapon Hardpoint",
+              "text": "You can equip 1 [Cannon], [Torpedo], or [Missile] upgrade."
+            },
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/14c504c0815213a66010c4013d9296ee.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/cb8efd0b723b8ceb0c35b7a64b309bf2.jpg",
+            "cost": 68,
+            "charges": { "value": 1, "recovers": 1 },
+            "slots": [
+              "Talent",
+              "Astromech",
+              "Modification",
+              "Title",
+              "Configuration",
+              "Tech"
+            ],
+            "ffg": 418,
+            "hyperspace": true
+          },
+          {
+            "name": "Blue Squadron Rookie",
+            "initiative": 1,
+            "limited": 0,
+            "xws": "bluesquadronrookie",
+            "text": "The Incom-FreiTek T-70 X-Wing was designed to improve upon the tactical flexibility of the venerable T-65. The starfighter's advanced droid socket is compatible with a wide array of astromechs, and its modular weapons pods allow ground crews to tailor its payload for specific missions.",
+            "shipAbility": {
+              "name": "Weapon Hardpoint",
+              "text": "You can equip 1 [Cannon], [Torpedo], or [Missile] upgrade."
+            },
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/a82a39a4c9baf883fbc6ae353abdd2ec.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/8ceeaf3d985f16da8b8d5a1ebc49ea2b.jpg",
+            "cost": 45,
+            "slots": ["Astromech", "Modification", "Title", "Configuration", "Tech"],
+            "ffg": 426,
+            "hyperspace": true
+          },
+          {
+            "name": "Red Squadron Expert",
+            "initiative": 3,
+            "limited": 0,
+            "xws": "redsquadronexpert",
+            "text": "Although the bulk of the Resistance Starfighter Corps is made up of young volunteers from the New Republic, their ranks are bolstered by veterans of the Galactic Civil War determined to finish what they started decades ago.",
+            "shipAbility": {
+              "name": "Weapon Hardpoint",
+              "text": "You can equip 1 [Cannon], [Torpedo], or [Missile] upgrade."
+            },
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/58967d94cfef285c4df2fdbb77fd0502.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/0e847453270afe089ea331316f7b7731.jpg",
+            "cost": 47,
+            "slots": [
+              "Talent",
+              "Astromech",
+              "Modification",
+              "Title",
+              "Configuration",
+              "Tech"
+            ],
+            "ffg": 425,
+            "hyperspace": true
+          },
+          {
+            "name": "Black Squadron Ace",
+            "initiative": 4,
+            "limited": 0,
+            "xws": "blacksquadronace-t70xwing",
+            "text": "During the Cold War, Poe Dameron's Black Squadron conducted daring covert operations against the First Order in defiance of treaties ratified by the New Republic Senate.",
+            "shipAbility": {
+              "name": "Weapon Hardpoint",
+              "text": "You can equip 1 [Cannon], [Torpedo], or [Missile] upgrade."
+            },
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/d2b6a5166b3fd985df5d1941408b58e1.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/e75228d8174f7879c51157fdd9b26e61.jpg",
+            "cost": 49,
+            "slots": [
+              "Talent",
+              "Astromech",
+              "Modification",
+              "Title",
+              "Configuration",
+              "Tech"
+            ],
+            "ffg": 451,
+            "hyperspace": true
+          },
+          {
+            "name": "Ello Asty",
+            "caption": "Born to Ill",
+            "initiative": 5,
+            "limited": 1,
+            "xws": "elloasty",
+            "ability": "After you reveal a red Tallon Roll [[Tallon Roll Left] or [Tallon Roll Right]] maneuver, if you have 2 or fewer stress tokens, treat that maneuver as white.",
+            "shipAbility": {
+              "name": "Weapon Hardpoint",
+              "text": "You can equip 1 [Cannon], [Torpedo], or [Missile] upgrade."
+            },
+            "cost": 56,
+            "slots": [
+              "Talent",
+              "Astromech",
+              "Modification",
+              "Title",
+              "Configuration",
+              "Tech"
+            ],
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/f77180ae05fd919a0dff2225380246a6.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/ff73537d7ab2f063e7a510c05013269e.jpg",
+            "ffg": 419,
+            "hyperspace": true
+          },
+          {
+            "name": "Joph Seastriker",
+            "caption": "Reckless Bodyguard",
+            "initiative": 3,
+            "limited": 1,
+            "xws": "jophseastriker",
+            "ability": "After you lose 1 shield, gain 1 evade token.",
+            "shipAbility": {
+              "name": "Weapon Hardpoint",
+              "text": "You can equip 1 [Cannon], [Torpedo], or [Missile] upgrade."
+            },
+            "cost": 51,
+            "slots": [
+              "Talent",
+              "Astromech",
+              "Modification",
+              "Title",
+              "Configuration",
+              "Tech"
+            ],
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/df85f5b77e16363a05c8f68792440166.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/b5b43d179b039649e764e6bd4f212a29.jpg",
+            "ffg": 424,
+            "hyperspace": true
+          },
+          {
+            "name": "Kare Kun",
+            "caption": "Woman of Action",
+            "initiative": 4,
+            "limited": 1,
+            "xws": "karekun",
+            "ability": "While you boost, you may use the [1 [Turn Left]] or [1 [Turn Right]] template instead.",
+            "shipAbility": {
+              "name": "Weapon Hardpoint",
+              "text": "You can equip 1 [Cannon], [Torpedo], or [Missile] upgrade."
+            },
+            "cost": 52,
+            "slots": [
+              "Talent",
+              "Astromech",
+              "Modification",
+              "Title",
+              "Configuration",
+              "Tech"
+            ],
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/6edb8ed4cbf882bf6dbe7a37b5981d85.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/f121bc27f2b283258a65d348bcafe40d.jpg",
+            "ffg": 421,
+            "hyperspace": true
+          },
+          {
+            "name": "Lieutenant Bastian",
+            "caption": "Optimistic Analyst",
+            "initiative": 2,
+            "limited": 1,
+            "xws": "lieutenantbastian",
+            "ability": "After a ship at range 1-2 is dealt a damage card, you may acquire a lock on that ship.",
+            "shipAbility": {
+              "name": "Weapon Hardpoint",
+              "text": "You can equip 1 [Cannon], [Torpedo], or [Missile] upgrade."
+            },
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/3f43d6b3c6e87bde6a681e9d4421dec8.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/52f96e7e98dc51c1280052514e303704.jpg",
+            "cost": 48,
+            "slots": ["Astromech", "Modification", "Title", "Configuration", "Tech"],
+            "ffg": 449,
+            "hyperspace": true
+          },
+          {
+            "name": "Nien Nunb",
+            "caption": "Sarcastic Survivor",
+            "initiative": 5,
+            "limited": 1,
+            "xws": "niennunb",
+            "ability": "After you gain a stress token, if there is an enemy ship in your [Front Arc] at range 0-1, you may remove that stress token.",
+            "shipAbility": {
+              "name": "Weapon Hardpoint",
+              "text": "You can equip 1 [Cannon], [Torpedo], or [Missile] upgrade."
+            },
+            "cost": 55,
+            "slots": [
+              "Talent",
+              "Astromech",
+              "Modification",
+              "Title",
+              "Configuration",
+              "Tech"
+            ],
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/00a3c393a33b33168bc61e47749e1474.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/5daa441317975eb576396af36e852f74.jpg",
+            "ffg": 420,
+            "hyperspace": true
+          },
+          {
+            "name": "Jaycris Tubbs",
+            "caption": "Loving Father",
+            "initiative": 1,
+            "limited": 1,
+            "xws": "jaycristubbs",
+            "ability": "After you fully execute a blue maneuver, you may choose a friendly ship at range 0-1. If you do, that ship removes 1 stress token.",
+            "shipAbility": {
+              "name": "Weapon Hardpoint",
+              "text": "You can equip 1 [Cannon], [Torpedo], or [Missile] upgrade."
+            },
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/5f3abacb9a081f5a3ca42f7a30da0e6c.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/8874efb312a64da49889c66f96338f9c.jpg",
+            "cost": 49,
+            "slots": ["Astromech", "Modification", "Title", "Configuration", "Tech"],
+            "ffg": 450,
+            "hyperspace": true
+          },
+          {
+            "name": "Jessika Pava",
+            "caption": "The Great Destroyer",
+            "initiative": 3,
+            "limited": 1,
+            "xws": "jessikapava",
+            "ability": "While you defend or perform an attack, you may spend 1 [Charge] or 1 non-recurring [Charge] from your equipped [Astromech] upgrade to reroll up to 1 of your dice for each other friendly ship at range 0-1.",
+            "shipAbility": {
+              "name": "Weapon Hardpoint",
+              "text": "You can equip 1 [Cannon], [Torpedo], or [Missile] upgrade."
+            },
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/bc26d8864f421f1362473aa4982108ba.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/05c48dc381e54c6951d3ee42d3587577.jpg",
+            "cost": 51,
+            "charges": { "value": 1, "recovers": 1 },
+            "slots": ["Astromech", "Modification", "Title", "Configuration", "Tech"],
+            "ffg": 423,
+            "hyperspace": true
+          },
+          {
+            "name": "Temmin Wexley",
+            "caption": "Snap",
+            "initiative": 4,
+            "limited": 1,
+            "xws": "temminwexley",
+            "ability": "After you fully execute a speed 2-4 maneuver, you may perform a [Boost] action.",
+            "shipAbility": {
+              "name": "Weapon Hardpoint",
+              "text": "You can equip 1 [Cannon], [Torpedo], or [Missile] upgrade."
+            },
+            "image": "https://sb-cdn.fantasyflightgames.com/card_images/en/bb98b7ea3a580542b586a9999fd352c9.png",
+            "artwork": "https://sb-cdn.fantasyflightgames.com/card_art/6acd118b12a34136d4d1df6c765a0deb.jpg",
+            "cost": 54,
+            "slots": [
+              "Talent",
+              "Astromech",
+              "Modification",
+              "Title",
+              "Configuration",
+              "Tech"
+            ],
+            "ffg": 422,
+            "hyperspace": true
+          }
+        ]
+      }
+      
+      
+      
+    },
+    "Scum and Villiany":{
 
-    ],
-    "Resistance":[
+    },
+    "Separatist Alliance":{
 
-    ],
-    "Scum and Villiany":[
-
-    ],
-    "Separatist Alliance":[
-
-    ]
+    }
 }

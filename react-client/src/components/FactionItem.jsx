@@ -1,9 +1,9 @@
 import React from 'react';
 
 const FactionItem = (props) => (
-  <div onClick={()=>props.handleClick(props.faction)}>
+  <li onClick={()=>props.handleClick(props.faction)}>
     { props.faction }
-  </div>
+  </li>
 )
 
 export default FactionItem;

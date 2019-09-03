@@ -1,12 +1,17 @@
 import React from 'react';
 
 const PilotItem = (props) => (
-  <li onClick={()=>props.handleClick(props.pilot, props.cost)}>
-    <button type="button">
-      { props.pilot }
+  <li>
+      <div>
+        { props.pilot }
+    </div>
+    <div>
       Cost : {props.cost}
-    </button>
+    </div>
     <img src={props.card}></img>
+    <div>
+      <button onClick={()=>props.handleClick(props.pilot, props.cost)} type="button">Add Ship</button>
+    </div>
   </li>
 )
 

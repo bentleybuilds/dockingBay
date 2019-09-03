@@ -1,6 +1,13 @@
 body{
     color: #f5f5f5;
-    /* background-color: #003366; */
     background-color: black
+}
+button{
+    color: #f5f5f5;
+    background-color: black;
+    cursor: pointer    
+}
+li{
+    list-style-type: none
 }
 

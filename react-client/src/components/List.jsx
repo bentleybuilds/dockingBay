@@ -13,7 +13,7 @@ const List = (props) => (
             Name Your List:
             <input type="text"/>
         </label>
-        <submit>Save</submit>
+        <input type="submit" value="Save"></input>
     </form>
   </div>
 )

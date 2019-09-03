@@ -1,11 +1,11 @@
 import React from 'react';
 
 const ShipItem = (props) => (
-  <button type="button">
-    <li onClick={()=>props.handleClick(props.ship)}>
+  <li>
+    <button onClick={()=>props.handleClick(props.ship)} type="button">
       { props.ship }
-    </li>
-  </button>
+    </button>
+  </li>
 )
 
 export default ShipItem;

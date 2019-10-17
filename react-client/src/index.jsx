@@ -61,7 +61,7 @@ class App extends React.Component {
   }
 
   render () {
-    return (
+    return ( 
       <div>
         <div>
           <List list={this.state.list} total={this.state.total}/>

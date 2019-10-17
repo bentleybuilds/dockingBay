@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/dockingbay');
+var Faction = require('./faction.js')
+var Ship = require('./ship.js');
 
 var db = mongoose.connection;
 
@@ -11,29 +13,8 @@ db.once('open', function() {
   console.log('mongoose connected successfully');
 });
 
-var factionSchema = mongoose.Schema({
-  name: String,
-  xws: String,
-  ffg: Number,
-  icon: String
-});
 
-var Faction = mongoose.model('Faction', factionSchema);
 
-var shipSchema = mongoose.Schema({
-  name: String,
-  xws: String,
-  ffg: Number,
-  size: String,
-  dial: Array,
-  faction: String,
-  stats: Array,
-  actions: Array,
-  icon: String,
-  pilots: Array,
-})
-
-var Ship = mongoose.model('Ship',shipSchema);
 
 var selectAllFactions = function(callback) {
   Faction.find({}, function(err, factions) {
@@ -45,7 +26,7 @@ var selectAllFactions = function(callback) {
   });
 };
 
-var selectAllFactions = (cb)=>{
+var selectAllShips = (cb)=>{
 Ship.find({},(err, ships)=>{
   if(err) {
     cb(err,null);
@@ -55,8 +36,6 @@ Ship.find({},(err, ships)=>{
 })
 }
 module.exports = {
-  Faction: Faction,
-  Ship: Ship,
-  selectAllFactions: selectAllFactions,
-  selectAllShips: selectAllShips
+  selectAllFactions,
+  selectAllShips
 };

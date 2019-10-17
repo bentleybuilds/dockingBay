@@ -16,26 +16,27 @@ db.once('open', function() {
 
 
 
-var selectAllFactions = function(callback) {
+var selectAllFactions = (cb) => {
   Faction.find({}, function(err, factions) {
     if(err) {
-      callback(err, null);
+      cb(err, null);
     } else {
-      callback(null, factions);
+      cb(null, factions);
     }
   });
 };
 
-var selectAllShips = (cb)=>{
-Ship.find({},(err, ships)=>{
+var selectAllShips = (faction, cb) => {
+Ship.find({faction: faction},(err, ships)=>{
   if(err) {
-    cb(err,null);
+    return cb(err,null);
   } else {
-    cb(null, ships)
+    return cb(null, ships)
   }
 })
 }
 module.exports = {
+  db,
   selectAllFactions,
   selectAllShips
 };

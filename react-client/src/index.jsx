@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Factions from './components/Factions.jsx'
-import Ships from './components/Ships.jsx'
-import Pilots from './components/Pilots.jsx'
-import List from './components/List.jsx'
+import Factions from './components/Factions.jsx';
+import Ships from './components/Ships.jsx';
+import Pilots from './components/Pilots.jsx';
+import List from './components/List.jsx';
+import { BrowserRouter } from 'react-router-dom';
 const ShipData = require('../../data/allPilots.json');
 
 class App extends React.Component {
@@ -76,4 +77,9 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(
+<BrowserRouter>
+  <App />
+</BrowserRouter>
+, document.getElementById('app')
+);

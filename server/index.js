@@ -9,7 +9,17 @@ app.use(express.static(__dirname + '/../react-client/dist'));
 
 
 app.get('/factions', function (req, res) {
-  items.selectAll(function(err, data) {
+  db.selectAllFactions(function(err, data) {
+    if(err) {
+      res.sendStatus(500);
+    } else {
+      res.json(data);
+    }
+  });
+});
+
+app.get('/ships/:faction', function (req, res) {
+  db.selectAllShips(req.params.faction, function(err, data) {
     if(err) {
       res.sendStatus(500);
     } else {

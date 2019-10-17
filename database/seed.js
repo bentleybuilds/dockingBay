@@ -10291,17 +10291,11 @@ const shipData = [
       }     
 ]
 
-const insertFactions = function() {
+
+const seedDB = function() {
   Faction.create(factionData)
-    .then(() => db.db.close());
-};
+    .then(Ship.create(shipData))
+    .then(() => db.db.close())
+}
 
-insertFactions();
-
-const insertShips = function() {
-    Ship.create(shipData)
-      .then(() => db.db.close());
-  };
-  
-  insertShips();
-  
+seedDB();

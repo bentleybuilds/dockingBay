@@ -5,6 +5,8 @@ const db = require('../database/index.js');
 
 var app = express();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../react-client/dist'));
 
 
@@ -18,8 +20,9 @@ app.get('/factions', function (req, res) {
   });
 });
 
-app.get('/ships/:faction', function (req, res) {
-  db.selectAllShips(req.params.faction, function(err, data) {
+app.get('/ships/', function (req, res) {
+  console.log(req.body)
+  db.selectAllShips(req.body.faction, function(err, data) {
     if(err) {
       res.sendStatus(500);
     } else {

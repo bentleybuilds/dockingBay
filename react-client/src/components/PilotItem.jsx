@@ -3,14 +3,14 @@ import React from 'react';
 const PilotItem = (props) => (
   <li>
       <div>
-        { props.pilot }
+        { props.pilot.name }
     </div>
     <div>
-      Cost : {props.cost}
+      Cost : {props.pilot.cost}
     </div>
-    <img src={props.card}></img>
+    <img src={props.pilot.image}></img>
     <div>
-      <button onClick={()=>props.handleClick(props.pilot, props.cost)} type="button">Add Ship</button>
+      <button onClick={()=>props.handleClick(props.pilot)} type="button">Add Ship</button>
     </div>
   </li>
 )

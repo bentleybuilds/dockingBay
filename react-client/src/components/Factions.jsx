@@ -7,7 +7,7 @@ const Factions = (props) => (
 
     <h1>Choose Your Faction</h1>
     <ul>
-        {props.factionList.map((faction)=>(<FactionItem faction = {faction} handleClick={props.handleClick}/>))}
+        {props.factionList.map((faction)=>(<FactionItem key={faction} faction={faction} handleClick={props.handleClick}/>))}
     </ul>
   </div>
 )

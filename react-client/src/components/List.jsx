@@ -4,7 +4,7 @@ const List = (props) => (
   <div>
     <h1>Your List</h1>
     <ul>
-        {props.list.map(pilot=>(<li>{pilot}<button>Remove</button></li>))}
+        {props.list.map(config=>(<li>{config.name} {config.cost}   <button>Remove</button></li>))}
 
     </ul>
     <h3>Total {props.total}/200</h3>

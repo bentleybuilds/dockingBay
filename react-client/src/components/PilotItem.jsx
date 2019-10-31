@@ -10,7 +10,7 @@ const PilotItem = (props) => (
     </div>
     <img src={props.pilot.image}></img>
     <div>
-      <button onClick={()=>props.handleClick(props.pilot)} type="button">Add Ship</button>
+      <button onClick={()=>props.handleClick({pilotName:props.pilot.name, cost:props.pilot.cost})} type="button">Add Ship</button>
     </div>
   </li>
 )

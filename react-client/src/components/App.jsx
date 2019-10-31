@@ -21,6 +21,17 @@ class App extends React.Component {
   
     // }
   
+    removeConfig(id,cost){
+      this.setState(state => {
+        const list = state.list.filter(item => item.id !== id);
+        const total = state.total - cost
+        return {
+          list,
+          total
+        };
+      });
+    };
+
     handleFactionClick(option) {
       this.setState({
         view: 'ShipView',
@@ -34,6 +45,11 @@ class App extends React.Component {
       })
     }
     handlePilotClick(config) {
+      if(this.state.list.length){
+        config.id = this.state.list[this.state.list.length-1].id + 1
+      } else {
+        config.id = 1;
+      }
       this.setState({
         list: this.state.list.concat(config),
         total: this.state.total + config.cost,
@@ -66,7 +82,7 @@ class App extends React.Component {
       return ( 
         <div key='app'>
           <div key = 'list'>
-            <List list={this.state.list} total={this.state.total}/>
+            <List list={this.state.list} total={this.state.total} handleDelete={this.removeConfig.bind(this)}/>
           </div>
           <div key = 'view'>
             {this.renderView()}

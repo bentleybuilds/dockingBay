@@ -4,7 +4,10 @@ import Factions from './Factions.jsx';
 import Ships from './Ships.jsx';
 import Pilots from './Pilots.jsx';
 import List from './List.jsx';
+import axios from 'axios'
+
 const ShipData = require('../../../data/allPilots.json');
+
 class App extends React.Component {
     constructor(props) {
       super(props);
@@ -17,10 +20,23 @@ class App extends React.Component {
       
     }
   
-    // componentDidMount(){
+    componentDidMount(){
+      this.loadFactions()
+      .then(
+        (factions) => {
+          return console.log(factions)
+        }
+      )
+    }
   
-    // }
-  
+    loadFactions(){
+        console.log('load factions invoked')
+        return axios.get('http://localhost:3000/factions')
+        .then((response) => {
+          return (response.data);
+        });
+    }
+
     removeConfig(id,cost){
       this.setState(state => {
         const list = state.list.filter(item => item.id !== id);

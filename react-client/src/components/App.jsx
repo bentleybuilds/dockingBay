@@ -6,13 +6,13 @@ import Pilots from './Pilots.jsx';
 import List from './List.jsx';
 import axios from 'axios'
 
-const ShipData = require('../../../data/allPilots.json');
+// const ShipData = require('../../../data/allPilots.json');
 
 class App extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        shipData: ShipData,
+        // shipData: ShipData,
         view: 'FactionView',
         list:[],
         total:0
@@ -24,7 +24,7 @@ class App extends React.Component {
       this.loadFactions()
       .then(
         (factions) => {
-          return console.log(factions)
+          this.setFactions(factions)
         }
       )
     }
@@ -32,11 +32,26 @@ class App extends React.Component {
     loadFactions(){
         console.log('load factions invoked')
         return axios.get('http://localhost:3000/factions')
-        .then((response) => {
-          return (response.data);
-        });
+        .then((response) => response.data);
     }
 
+    setFactions(factionList){
+      this.setState({
+        factions:factionList
+      })
+    }
+    
+    loadShips(faction){
+      console.log('load ships invoked ', faction)
+      return axios.get(`http://localhost:3000/ships/${faction}`)
+      .then((response)=>response.data)
+    }
+
+    setShips(shipList){
+      this.setState({
+        ships:shipList
+      })
+    }
     removeConfig(id,cost){
       this.setState(state => {
         const list = state.list.filter(item => item.id !== id);
@@ -49,11 +64,21 @@ class App extends React.Component {
     };
 
     handleFactionClick(option) {
-      this.setState({
+      console.log('handleFactionClick invoked option ', option)
+       this.setState({
         view: 'ShipView',
         chosenFaction: option
-      })
+      },()=>{
+      this.loadShips(this.state.chosenFaction)
+      .then(
+        (ships) => {
+          this.setShips(ships)
+        }
+      )
+      }
+      )
     }
+
     handleShipClick(option) {
       this.setState({
         view: 'PilotView',
@@ -83,11 +108,11 @@ class App extends React.Component {
       const {view} = this.state;
   
       if (view === 'FactionView') {
-        return <Factions handleClick={this.handleFactionClick.bind(this)} factionList = {Object.keys(this.state.shipData)}/>;
+        return <Factions handleClick={this.handleFactionClick.bind(this)} factionList = {this.state.factions || 'Loading'}/>;
       } if (view === 'ShipView') {
-        return <Ships handleClick={this.handleShipClick.bind(this)} handleBackClick={this.handleBackClick.bind(this)} shipList={Object.keys(this.state.shipData[this.state.chosenFaction])}/>;
+        return <Ships handleClick={this.handleShipClick.bind(this)} handleBackClick={this.handleBackClick.bind(this)} shipList={this.state.ships || 'Loading'}/>;
       } if (view === 'PilotView') {
-        return <Pilots handleClick={this.handlePilotClick.bind(this)} handleBackClick={this.handleBackClick.bind(this)} pilotList={this.state.shipData[this.state.chosenFaction][this.state.chosenShip].pilots}/>;
+        return <Pilots handleClick={this.handlePilotClick.bind(this)} handleBackClick={this.handleBackClick.bind(this)} pilotList={this.state.chosenShip && this.state.chosenShip.pilots || 'Loading'}/>;
       }
       // else {
       //   return <Post selectedPost = {this.state.posts[this.state.view]}/>;

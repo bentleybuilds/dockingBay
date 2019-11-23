@@ -20,9 +20,9 @@ app.get('/factions', function (req, res) {
   });
 });
 
-app.get('/ships/', function (req, res) {
-  console.log(req.body)
-  db.selectAllShips(req.body.faction, function(err, data) {
+app.get('/ships/:faction', function (req, res) {
+  console.log(req.params.faction)
+  db.selectAllShips(req.params.faction, function(err, data) {
     if(err) {
       res.sendStatus(500);
     } else {

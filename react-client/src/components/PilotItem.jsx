@@ -2,8 +2,9 @@ import React from 'react';
 
 const PilotItem = (props) => (
   <li>
-      <div>
-        { props.pilot.name }
+      <div className="pliotHeader">
+        <span className="pilotInitiative">{props.pilot.initiative}</span> { props.pilot.name } <br></br>
+        {props.pilot.ability  || null}
     </div>
     <div>
       Cost : {props.pilot.cost}

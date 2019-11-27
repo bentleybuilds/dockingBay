@@ -29,10 +29,10 @@ class App extends React.Component {
       )
     }
   
-    loadFactions(){
+    async loadFactions(){
         console.log('load factions invoked')
-        return axios.get('http://localhost:3000/factions')
-        .then((response) => response.data);
+        const response = await axios.get('http://localhost:3000/factions');
+      return response.data;
     }
 
     setFactions(factionList){
@@ -41,10 +41,10 @@ class App extends React.Component {
       })
     }
     
-    loadShips(faction){
+    async loadShips(faction){
       console.log('load ships invoked ', faction)
-      return axios.get(`http://localhost:3000/ships/${faction}`)
-      .then((response)=>response.data)
+      const response = await axios.get(`http://localhost:3000/ships/${faction}`);
+      return response.data;
     }
 
     setShips(shipList){

@@ -10,4 +10,11 @@ button{
 li{
     list-style-type: none
 }
+.pilotHeader{
+    size: 15 
+}
 
+.pilotInitiative{
+    size: 20;
+    color: orange
+}

@@ -31,7 +31,7 @@ class App extends React.Component {
   
     async loadFactions(){
         console.log('load factions invoked')
-        const response = await axios.get('http://localhost:3000/factions');
+        const response = await axios.get('http://localhost:8888/factions');
       return response.data;
     }
 
@@ -43,7 +43,7 @@ class App extends React.Component {
     
     async loadShips(faction){
       console.log('load ships invoked ', faction)
-      const response = await axios.get(`http://localhost:3000/ships/${faction}`);
+      const response = await axios.get(`http://localhost:8888/ships/${faction}`);
       return response.data;
     }
 

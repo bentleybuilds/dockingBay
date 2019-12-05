@@ -6939,7 +6939,7 @@ const shipData = [
           }
         ]
       },
-    // Scum and Villiany
+    // Scum and Villainy
     {
         "name": "Aggressor Assault Fighter",
         "xws": "aggressorassaultfighter",

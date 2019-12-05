@@ -11,13 +11,20 @@ module.exports = {
   module : {
     loaders : [
       {
-        test : /\.jsx?/,
+        test : /\.(js|jsx)$/,
         include : SRC_DIR,
         loader : 'babel-loader',      
         query: {
           presets: ['react', 'es2015']
        }
-      }
+      },
+      {
+        test: /\.s?css$/,
+        use: [
+            'style-loader',
+            'css-loader'
+        ]
+    }
     ]
   }
 };

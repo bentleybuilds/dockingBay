@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import User from './User.jsx'
 import Factions from './Factions.jsx';
 import Ships from './Ships.jsx';
 import Pilots from './Pilots.jsx';
@@ -13,6 +14,8 @@ class App extends React.Component {
       super(props);
       this.state = {
         // shipData: ShipData,
+        signedIn: false,
+        user: undefined,
         view: 'FactionView',
         list:[],
         total:0
@@ -112,20 +115,18 @@ class App extends React.Component {
       } if (view === 'ShipView') {
         return <Ships handleClick={this.handleShipClick.bind(this)} handleBackClick={this.handleBackClick.bind(this)} shipList={this.state.ships || 'Loading'}/>;
       } if (view === 'PilotView') {
-        return <Pilots handleClick={this.handlePilotClick.bind(this)} handleBackClick={this.handleBackClick.bind(this)} pilotList={this.state.chosenShip && this.state.chosenShip.pilots || 'Loading'}/>;
+        return <Pilots handleClick={this.handlePilotClick.bind(this)} handleBackClick={this.handleBackClick.bind(this)} ship={this.state.chosenShip && this.state.chosenShip || null} pilotList={this.state.chosenShip && this.state.chosenShip.pilots || 'Loading'}/>;
       }
-      // else {
-      //   return <Post selectedPost = {this.state.posts[this.state.view]}/>;
-      // }
     }
   
     render () {
       return ( 
-        <div key='app'>
-          <div key = 'list'>
+        <div>
+          <button type='button'>Sign in</button>
+          <div>
             <List list={this.state.list} total={this.state.total} handleDelete={this.removeConfig.bind(this)}/>
           </div>
-          <div key = 'view'>
+          <div>
             {this.renderView()}
           </div>
         </div>

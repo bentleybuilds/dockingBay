@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/dockingbay');
 var Faction = require('./faction.js')
 var Ship = require('./ship.js');
+var List = require('./list.js')
 
 var db = mongoose.connection;
 
@@ -35,8 +36,19 @@ Ship.find({faction: faction},(err, ships)=>{
   }
 })
 }
+
+var addList = (user, name, faction, list, cb) => {
+  List.create({user, name, faction, list},(err, list)=>{
+    if(err) {
+      return cb(err);
+    } else {
+      return cb(null, list)
+    }
+  })
+}
 module.exports = {
   db,
   selectAllFactions,
-  selectAllShips
+  selectAllShips,
+  addList
 };

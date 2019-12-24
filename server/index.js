@@ -31,6 +31,18 @@ app.get('/ships/:faction', function (req, res) {
   });
 });
 
+app.post('/lists', function (req, res) {
+  db.addList(req.body.user,req.body.name,req.body.faction, req.body.list, function(err, data) {
+    console.log('db.addList invoked')
+      if(err) {
+        res.sendStatus(500);
+      } else {
+        console.log(`${data}`)
+        res.send(data)
+      }
+  })
+})
+
 app.listen(port, function() {
   console.log(`listening on port ${port}!`);
 });

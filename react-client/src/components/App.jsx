@@ -6,6 +6,7 @@ import Ships from './Ships.jsx';
 import Pilots from './Pilots.jsx';
 import List from './List.jsx';
 import axios from 'axios'
+import SignIn from './SignIn.jsx';
 
 // const ShipData = require('../../../data/allPilots.json');
 
@@ -13,9 +14,9 @@ class App extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        // shipData: ShipData,
         signedIn: false,
-        user: undefined,
+        signInScreen: false,
+        user: null,
         view: 'FactionView',
         list:[],
         total:0
@@ -32,9 +33,15 @@ class App extends React.Component {
       )
     }
   
+    saveList(user, name, faction, list){
+      console.log('save list invoked')
+      return axios.post(`http://localhost:8888/lists/${user}/${name}/${faction}/${list}`)
+      .then((response)=>response.data)
+    }
+
     async loadFactions(){
-        console.log('load factions invoked')
-        const response = await axios.get('http://localhost:8888/factions');
+      console.log('load factions invoked')
+      const response = await axios.get('http://localhost:8888/factions');
       return response.data;
     }
 
@@ -72,14 +79,13 @@ class App extends React.Component {
         view: 'ShipView',
         chosenFaction: option
       },()=>{
-      this.loadShips(this.state.chosenFaction)
-      .then(
-        (ships) => {
-          this.setShips(ships)
-        }
-      )
-      }
-      )
+        this.loadShips(this.state.chosenFaction)
+        .then(
+          (ships) => {
+            this.setShips(ships)
+          } 
+        )
+      })
     }
 
     handleShipClick(option) {
@@ -105,8 +111,33 @@ class App extends React.Component {
         view: newView
       })
     }
-  
-  
+    
+    handleCancelClick() {
+      this.setState({
+        signInScreen: false
+      })
+    }
+
+    handleSignInClick(userName) {
+      this.setState({
+        signInScreen: !this.state.signInScreen,
+        signedIn:true,
+        user:userName
+      })
+    }
+    handleLogInClick() {
+      this.setState({
+        signInScreen:!this.state.signInScreen
+      })
+    }
+
+    handleSignOutClick() {
+      this.setState({
+        signedIn:false,
+        user:null
+      })
+    }
+
     renderView() {
       const {view} = this.state;
   
@@ -122,9 +153,14 @@ class App extends React.Component {
     render () {
       return ( 
         <div>
-          <button type='button'>Sign in</button>
           <div>
-            <List list={this.state.list} total={this.state.total} handleDelete={this.removeConfig.bind(this)}/>
+            {this.state.signedIn && <User userName={this.state.user} handleSignOutClick={this.handleSignOutClick.bind(this)}/> || <button type='button' onClick={()=>this.handleLogInClick()}>Sign in</button>}
+          </div>
+          <div>
+            {this.state.signInScreen && <SignIn handleSignIn={this.handleSignInClick.bind(this)} handleCancel={this.handleCancelClick.bind(this)}/>}
+          </div>
+          <div>
+            <List list={this.state.list} total={this.state.total} handleDelete={this.removeConfig.bind(this)} handleAddList={this.saveList.bind(this)} user={this.state.user} faction={this.state.chosenFaction}/>
           </div>
           <div>
             {this.renderView()}

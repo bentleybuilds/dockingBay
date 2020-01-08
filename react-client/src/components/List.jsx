@@ -8,13 +8,14 @@ const List = (props) => (
 
     </ul>
     <h3>Total {props.total}/200</h3>
-    <form>
+    {props.user &&
+      <form>
         <label>
             Name Your List:
-            <input type="text"/>
+            <input id='listName' type="text"/>
         </label>
-        <input type="submit" value="Save"></input>
-    </form>
+        <input type="button" value="Save" onClick={()=>props.handleAddList(props.user,document.getElementById('listName').value,props.faction,JSON.stringify(props.list))}></input>
+    </form>}
   </div>
 )
 

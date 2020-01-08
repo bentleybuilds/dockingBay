@@ -1,6 +1,5 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-// var items = require('../database');
 const db = require('../database/index.js');
 const port = 8888
 var app = express();
@@ -31,13 +30,12 @@ app.get('/ships/:faction', function (req, res) {
   });
 });
 
-app.post('/lists', function (req, res) {
-  db.addList(req.body.user,req.body.name,req.body.faction, req.body.list, function(err, data) {
+app.post('/lists/:user/:name/:faction/:list', function (req, res) {
+  db.addList(req.params.user,req.params.name,req.params.faction, JSON.parse(req.params.list), function(err, data) {
     console.log('db.addList invoked')
       if(err) {
         res.sendStatus(500);
       } else {
-        console.log(`${data}`)
         res.send(data)
       }
   })
